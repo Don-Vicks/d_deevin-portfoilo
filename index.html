@@ -1,471 +1,1822 @@
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <title>Divine — Content Creator · Social Media Manager · On-Camera Host</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#FACC15">
-    <meta name="description" content="Amarachukwu Divine Ejikeme — Lagos-based content creator, social media manager, and on-camera host bringing a culturally grounded Nigerian voice to web2 and web3.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="min-h-screen bg-neutral-950 text-neutral-200 antialiased [font-family:'Inter',system-ui,-apple-system,Segoe_UI,Roboto,Ubuntu,'Helvetica_Neue',Arial,'Apple_Color_Emoji','Segoe_UI_Emoji'] selection:bg-yellow-300 selection:text-neutral-900">
-    <!-- Header -->
-    <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/70 border-b border-neutral-800">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between">
-          <a href="#" class="inline-flex items-center gap-2 group">
-            <div class="h-8 w-8 rounded-md bg-yellow-400 text-neutral-900 grid place-items-center font-semibold tracking-tight" style="letter-spacing:-0.02em">DD</div>
-            <span class="text-sm sm:text-base font-medium text-neutral-300 group-hover:text-white transition-colors">Divine • Deevine</span>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <title>Divine Ejikeme — Content Creator · On-Camera Host · SMM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0D0D11">
+  <meta name="description" content="Divine Ejikeme (@D_deevin) — Lagos-based creator, video host, and social media strategist. Turning ideas into videos people actually watch.">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Divine Ejikeme — Creator, Host &amp; Social Media Strategist">
+  <meta property="og:description" content="Cinematography eye, relatable Lagos energy, and real audience growth. 6M+ impressions, 150+ live audio spaces.">
+  <meta property="og:image" content="https://47yv34ga2z.ufs.sh/f/2NpRwKYeHhfNP2MxBQhlCbgNZvrOQ5Y0fpnEK2i6LGVHzB1I">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              black: '#0A0A0E',
+              dark: '#101015',
+              surface: '#16161D',
+              card: '#1B1B24',
+              border: '#2A2A36',
+              borderMuted: '#1F1F2A',
+              accent: '#E5A93C',
+              accentHover: '#D4972B',
+              muted: '#8E8E9F',
+            }
+          },
+          animation: {
+            'marquee': 'marquee 26s linear infinite',
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Smooth scrolling and header offset */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5.5rem;
+      background-color: #0A0A0E;
+    }
+
+    /* Clean, minimal scroll progress bar */
+    #scrollProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2.5px;
+      background: #E5A93C;
+      z-index: 70;
+      width: 0%;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Scroll Reveal Classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* Custom minimalist scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A0A0E;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #242430;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #E5A93C;
+    }
+
+    /* Floating Chapter Navigator */
+    .nav-pill {
+      transition: all 0.2s ease;
+    }
+    .nav-pill.active {
+      background: #E5A93C;
+      color: #0A0A0E;
+      font-weight: 700;
+    }
+
+    /* Waveform animation */
+    .wave-bar {
+      width: 3px;
+      border-radius: 1px;
+      background: #E5A93C;
+      transition: height 0.15s ease;
+    }
+    .playing .wave-bar:nth-child(1) { animation: wave 0.8s infinite ease-in-out alternate; }
+    .playing .wave-bar:nth-child(2) { animation: wave 1.1s infinite 0.2s ease-in-out alternate; }
+    .playing .wave-bar:nth-child(3) { animation: wave 0.9s infinite 0.4s ease-in-out alternate; }
+    .playing .wave-bar:nth-child(4) { animation: wave 1.3s infinite 0.1s ease-in-out alternate; }
+    .playing .wave-bar:nth-child(5) { animation: wave 0.7s infinite 0.3s ease-in-out alternate; }
+    .playing .wave-bar:nth-child(6) { animation: wave 1.0s infinite 0.5s ease-in-out alternate; }
+
+    @keyframes wave {
+      0% { height: 4px; }
+      100% { height: 22px; }
+    }
+
+    /* Clean Card Hover */
+    .editorial-card {
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+    .editorial-card:hover {
+      border-color: rgba(229, 169, 60, 0.4);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-brand-black text-slate-200 font-sans antialiased selection:bg-brand-accent selection:text-brand-black relative">
+
+  <!-- Minimal Scroll Progress Indicator -->
+  <div id="scrollProgress"></div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="fixed bottom-24 sm:bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 bg-brand-surface border border-brand-border text-slate-100 px-4 py-3 rounded-xl shadow-xl">
+    <div class="h-7 w-7 rounded-lg bg-brand-accent text-brand-black flex items-center justify-center font-bold">
+      <i data-lucide="check" class="w-4 h-4"></i>
+    </div>
+    <div>
+      <p id="toastTitle" class="text-sm font-semibold text-white">Copied to clipboard</p>
+      <p id="toastMessage" class="text-xs text-brand-muted">Ready to paste.</p>
+    </div>
+  </div>
+
+  <!-- FLOATING QUICK STORY NAVIGATOR -->
+  <div id="quickNavigator" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 max-w-[96vw] transition-all duration-300">
+    <nav aria-label="Story chapter navigation" class="flex items-center gap-1 sm:gap-1.5 p-1.5 rounded-full bg-brand-dark/95 backdrop-blur-xl border border-brand-border shadow-2xl">
+      
+      <!-- Active chapter indicator -->
+      <div class="hidden md:flex items-center gap-2 pl-3 pr-2.5 py-1 text-xs font-semibold text-brand-accent border-r border-brand-border mr-1 select-none">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+        <span id="activeChapterName" class="tracking-wide">Intro</span>
+      </div>
+
+      <!-- Chapter 00 -->
+      <a href="#about" class="nav-pill active px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="about" data-title="Overview">
+        <span class="text-[10px] opacity-75">00</span>
+        <span class="hidden sm:inline">Intro</span>
+      </a>
+
+      <!-- Chapter 01 -->
+      <a href="#chapter-origin" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="chapter-origin" data-title="Roots &amp; Background">
+        <span class="text-[10px] opacity-75">01</span>
+        <span class="hidden sm:inline">Roots</span>
+      </a>
+
+      <!-- Chapter 02 -->
+      <a href="#chapter-bridge" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="chapter-bridge" data-title="The Lagos Vibe">
+        <span class="text-[10px] opacity-75">02</span>
+        <span class="hidden sm:inline">Vibe</span>
+      </a>
+
+      <!-- Chapter 03 -->
+      <a href="#chapter-proof" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="chapter-proof" data-title="Results">
+        <span class="text-[10px] opacity-75">03</span>
+        <span class="hidden sm:inline">Results</span>
+      </a>
+
+      <!-- Chapter 04 -->
+      <a href="#chapter-method" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="chapter-method" data-title="Skills &amp; Gear">
+        <span class="text-[10px] opacity-75">04</span>
+        <span class="hidden sm:inline">Skills</span>
+      </a>
+
+      <!-- Chapter 05 -->
+      <a href="#interactive-hub" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="interactive-hub" data-title="Work Together">
+        <span class="text-[10px] opacity-75">05</span>
+        <span class="hidden sm:inline">Collab</span>
+      </a>
+
+      <!-- Quick Talk CTA -->
+      <a href="#contact" class="px-3 py-1.5 rounded-full text-xs font-bold bg-white text-brand-black hover:bg-slate-200 transition-all flex items-center gap-1.5">
+        <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+        <span class="hidden sm:inline">Contact</span>
+      </a>
+
+    </nav>
+  </div>
+
+  <!-- Minimalist Navigation Bar -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-brand-black/90 border-b border-brand-borderMuted transition-all duration-300">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-18 py-4 items-center justify-between">
+        
+        <!-- Logo / Brand -->
+        <a href="#about" class="flex items-center gap-3 group">
+          <div class="h-9 w-9 rounded-lg bg-brand-surface border border-brand-border text-brand-accent font-heading font-bold flex items-center justify-center text-sm group-hover:border-brand-accent transition-colors">
+            DD
+          </div>
+          <div>
+            <span class="font-heading font-bold text-white text-base block tracking-tight group-hover:text-brand-accent transition-colors">
+              Divine Ejikeme
+            </span>
+            <span class="text-xs text-brand-muted font-medium flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              @D_deevin · Open for briefs
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-1 bg-brand-surface/70 border border-brand-border p-1 rounded-full text-xs">
+          <a href="#about" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">Overview</a>
+          <a href="#chapter-origin" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">The Story</a>
+          <a href="#chapter-bridge" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">The Vibe</a>
+          <a href="#chapter-proof" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">Case Studies</a>
+          <a href="#chapter-method" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">Skills &amp; Gear</a>
+          <a href="#feed" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">Live Work</a>
+          <a href="#interactive-hub" class="px-3.5 py-1.5 rounded-full font-semibold text-brand-accent bg-brand-accent/10 hover:bg-brand-accent/20 transition-all flex items-center gap-1.5">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Collab
           </a>
-          <nav class="hidden md:flex items-center gap-6">
-            <a href="#about" class="text-sm text-neutral-300 hover:text-white transition-colors">About</a>
-            <a href="#experience" class="text-sm text-neutral-300 hover:text-white transition-colors">Experience</a>
-            <a href="#skills" class="text-sm text-neutral-300 hover:text-white transition-colors">Skills</a>
-            <a href="#content" class="text-sm text-neutral-300 hover:text-white transition-colors">Content</a>
-            <a href="#contact" class="text-sm text-neutral-300 hover:text-white transition-colors">Contact</a>
-            <a href="#contact" class="text-sm text-neutral-900 bg-yellow-400 hover:bg-yellow-300 px-3.5 py-2 rounded-md font-medium transition-colors inline-flex items-center gap-2">
-              <i data-lucide="mail" class="w-4 h-4"></i>
-              Get in touch
-            </a>
-          </nav>
-          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-neutral-300 hover:text-white hover:bg-neutral-800/60 focus:outline-none focus:ring-2 focus:ring-yellow-400/40">
-            <i data-lucide="menu" class="w-5 h-5"></i>
+        </nav>
+
+        <!-- Action CTAs -->
+        <div class="hidden sm:flex items-center gap-2.5">
+          <button onclick="copyToClipboard('divineprosper8@gmail.com', 'Email copied', 'divineprosper8@gmail.com')" class="px-3.5 py-2 rounded-lg text-xs font-medium border border-brand-border bg-brand-surface text-slate-300 hover:text-white hover:border-slate-500 transition-all flex items-center gap-2">
+            <i data-lucide="copy" class="w-3.5 h-3.5 text-brand-accent"></i>
+            Copy Email
           </button>
-        </div>
-      </div>
-      <div id="mobileMenu" class="md:hidden hidden border-t border-neutral-800">
-        <div class="px-4 py-4 flex flex-col gap-2">
-          <a href="#about" class="px-3 py-2 rounded-md text-sm text-neutral-300 hover:text-white hover:bg-neutral-800/60">About</a>
-          <a href="#experience" class="px-3 py-2 rounded-md text-sm text-neutral-300 hover:text-white hover:bg-neutral-800/60">Experience</a>
-          <a href="#skills" class="px-3 py-2 rounded-md text-sm text-neutral-300 hover:text-white hover:bg-neutral-800/60">Skills</a>
-          <a href="#content" class="px-3 py-2 rounded-md text-sm text-neutral-300 hover:text-white hover:bg-neutral-800/60">Content</a>
-          <a href="#contact" class="px-3 py-2 rounded-md text-sm text-neutral-300 hover:text-white hover:bg-neutral-800/60">Contact</a>
-          <a href="#contact" class="px-3 py-2 rounded-md text-sm text-neutral-900 bg-yellow-400 hover:bg-yellow-300 inline-flex items-center gap-2">
-            <i data-lucide="mail" class="w-4 h-4"></i> Get in touch
+          <a href="#contact" class="px-4 py-2 rounded-lg text-xs font-bold bg-brand-accent hover:bg-brand-accentHover text-brand-black transition-all flex items-center gap-2">
+            <i data-lucide="send" class="w-3.5 h-3.5"></i>
+            Let's Talk
           </a>
         </div>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="mobileMenuBtn" aria-label="Toggle menu" class="lg:hidden p-2 rounded-lg border border-brand-border bg-brand-surface text-slate-200 hover:text-white focus:outline-none">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
       </div>
-    </header>
+    </div>
 
-    <!-- Hero -->
-    <section id="about" class="relative overflow-hidden">
-      <div class="absolute inset-0 -z-10 pointer-events-none">
-        <div class="absolute -top-32 -right-24 h-96 w-96 rounded-full bg-yellow-400/10 blur-3xl"></div>
-        <div class="absolute -bottom-40 -left-24 h-[28rem] w-[28rem] rounded-full bg-yellow-500/10 blur-3xl"></div>
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-brand-border bg-brand-dark px-4 py-4 space-y-1">
+      <a href="#about" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">Overview</a>
+      <a href="#chapter-origin" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">Roots &amp; Background</a>
+      <a href="#chapter-bridge" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">The Lagos Vibe</a>
+      <a href="#chapter-proof" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">Case Studies</a>
+      <a href="#chapter-method" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">Skills &amp; Production Gear</a>
+      <a href="#feed" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">Live Content Feed</a>
+      <a href="#interactive-hub" class="block px-3 py-2 rounded-lg text-sm font-medium text-brand-accent hover:bg-brand-surface flex items-center gap-2">
+        <i data-lucide="sparkles" class="w-4 h-4"></i> Collab Builder
+      </a>
+      <a href="#contact" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">Contact Divine</a>
+      <div class="pt-3 border-t border-brand-border flex gap-2">
+        <button onclick="copyToClipboard('divineprosper8@gmail.com', 'Email copied', 'divineprosper8@gmail.com')" class="flex-1 py-2 rounded-lg text-xs font-medium border border-brand-border bg-brand-surface text-slate-300 flex items-center justify-center gap-1.5">
+          <i data-lucide="copy" class="w-3.5 h-3.5 text-brand-accent"></i> Copy Email
+        </button>
+        <a href="mailto:divineprosper8@gmail.com" class="flex-1 py-2 rounded-lg text-xs font-bold bg-brand-accent text-brand-black flex items-center justify-center gap-1.5">
+          <i data-lucide="mail" class="w-3.5 h-3.5"></i> Email
+        </a>
       </div>
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20 pb-12 sm:pb-20">
-        <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
-          <div>
-            <div class="inline-flex items-center gap-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 px-3 py-1 text-xs font-medium text-yellow-300">
-              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-              Content Creator · Social Media Manager · On-Camera Host
-            </div>
-            <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white">
-              Divine
-            </h1>
-            <p class="mt-1 text-lg sm:text-xl text-neutral-400">Amarachukwu Divine Ejikeme</p>
+    </div>
+  </header>
 
-            <p class="mt-5 text-base sm:text-lg text-neutral-300 leading-relaxed">
-              Lagos-based content creator, social media manager, and on-camera host with 3+ years of experience across TikTok, Instagram Reels, and X. Content spans everyday Lagos lifestyle and culture as comfortably as Web3 education, bringing a culturally grounded Nigerian voice to web2 and web3 briefs alike.
+  <!-- Clean Marquee Ticker -->
+  <div class="border-b border-brand-borderMuted bg-brand-surface/50 overflow-hidden py-2 select-none">
+    <div class="flex whitespace-nowrap animate-marquee">
+      <div class="flex items-center gap-8 text-xs font-medium text-slate-400 px-4">
+        <span class="text-white font-semibold flex items-center gap-1.5"><i data-lucide="flame" class="w-3.5 h-3.5 text-brand-accent"></i> 6M+ IMPRESSIONS ON X</span>
+        <span class="text-brand-border">/</span>
+        <span class="text-slate-300">150+ GM SOLANA SPACES HOSTED</span>
+        <span class="text-brand-border">/</span>
+        <span class="text-brand-accent font-semibold">0 → 1,000+ TIKTOK COMMUNITY GROWTH</span>
+        <span class="text-brand-border">/</span>
+        <span class="text-slate-300">LAGOS STREET CULTURE &amp; ENERGY</span>
+        <span class="text-brand-border">/</span>
+        <span class="text-white font-semibold">CINEMATOGRAPHY &amp; ON-CAMERA HOST</span>
+        <span class="text-brand-border">/</span>
+      </div>
+      <div class="flex items-center gap-8 text-xs font-medium text-slate-400 px-4">
+        <span class="text-white font-semibold flex items-center gap-1.5"><i data-lucide="flame" class="w-3.5 h-3.5 text-brand-accent"></i> 6M+ IMPRESSIONS ON X</span>
+        <span class="text-brand-border">/</span>
+        <span class="text-slate-300">150+ GM SOLANA SPACES HOSTED</span>
+        <span class="text-brand-border">/</span>
+        <span class="text-brand-accent font-semibold">0 → 1,000+ TIKTOK COMMUNITY GROWTH</span>
+        <span class="text-brand-border">/</span>
+        <span class="text-slate-300">LAGOS STREET CULTURE &amp; ENERGY</span>
+        <span class="text-brand-border">/</span>
+        <span class="text-white font-semibold">CINEMATOGRAPHY &amp; ON-CAMERA HOST</span>
+        <span class="text-brand-border">/</span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- PROLOGUE: THE HERO (PRESERVING EXACT HERO IMAGE) -->
+    <section id="about" class="relative pt-12 pb-20 sm:pt-16 sm:pb-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Copy (Left 7 cols) -->
+          <div class="lg:col-span-7 space-y-6 text-left reveal">
+            
+            <!-- Badges -->
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium bg-brand-surface border border-brand-border text-slate-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+                Creator · Host · SMM
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium bg-brand-surface border border-brand-border text-brand-muted">
+                <i data-lucide="map-pin" class="w-3 h-3 text-slate-400"></i> Lagos, Nigeria
+              </span>
+            </div>
+
+            <!-- Main Heading (Clean solid typography, no cheesy gradients) -->
+            <div>
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-white leading-[1.1]">
+                Making content that people <span class="text-brand-accent">actually love</span> watching.
+              </h1>
+              <p class="mt-3 text-lg font-heading font-medium text-slate-400">
+                Amarachukwu Divine Ejikeme <span class="text-brand-accent font-semibold">(@D_deevin)</span>
+              </p>
+            </div>
+
+            <!-- Bio Narrative -->
+            <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+              Most brand content is dry and forgets the human on the other side of the screen. <strong class="text-white font-semibold">Divine fixes that</strong>: combining clean cinematography, relatable Lagos humor, and on-camera energy to build real communities across TikTok, Reels, and X.
             </p>
-            <p class="mt-4 text-sm sm:text-base text-neutral-400">
-              Backed by a cinematography background for a sharp, intentional camera eye.
-            </p>
 
-            <div class="mt-6 flex flex-wrap gap-3">
-              <a href="https://www.instagram.com/deevine_content" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md bg-yellow-400 px-4 py-2.5 text-neutral-900 font-medium text-sm hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-400/40 transition-colors">
-                <i data-lucide="instagram" class="w-4 h-4"></i>
-                @deevine_content
+            <!-- Story Quick Box -->
+            <div class="p-4 rounded-xl bg-brand-surface border border-brand-border flex items-start gap-3.5 max-w-2xl editorial-card">
+              <div class="p-2 rounded-lg bg-brand-card border border-brand-border text-brand-accent shrink-0 mt-0.5">
+                <i data-lucide="compass" class="w-4 h-4"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-sm font-semibold text-white">The Creator Story</h4>
+                  <a href="#chapter-origin" class="text-xs font-medium text-brand-accent hover:underline flex items-center gap-1">
+                    Explore <i data-lucide="arrow-down" class="w-3 h-3"></i>
+                  </a>
+                </div>
+                <p class="text-xs text-brand-muted mt-0.5">
+                  How a history degree, lens craft, and Lagos culture turned into 6M+ impressions and 150+ live audio spaces.
+                </p>
+              </div>
+            </div>
+
+            <!-- Social Action Pills -->
+            <div class="pt-1 flex flex-wrap items-center gap-2.5">
+              <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg text-xs font-medium bg-brand-surface border border-brand-border hover:border-brand-accent text-slate-300 hover:text-white transition-all flex items-center gap-2">
+                <i data-lucide="twitter" class="w-3.5 h-3.5 text-brand-accent"></i>
+                <span>@D_deevin</span>
+                <i data-lucide="arrow-up-right" class="w-3 h-3 text-slate-500"></i>
               </a>
-              <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md border border-neutral-700 bg-neutral-900 px-4 py-2.5 text-neutral-200 font-medium text-sm hover:bg-neutral-800 hover:border-neutral-600 focus:outline-none focus:ring-2 focus:ring-yellow-400/30 transition-colors">
-                <i data-lucide="twitter" class="w-4 h-4"></i>
-                @D_deevin
+              <a href="https://www.instagram.com/deevine_content" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg text-xs font-medium bg-brand-surface border border-brand-border hover:border-brand-accent text-slate-300 hover:text-white transition-all flex items-center gap-2">
+                <i data-lucide="instagram" class="w-3.5 h-3.5 text-rose-400"></i>
+                <span>@deevine_content</span>
+                <i data-lucide="arrow-up-right" class="w-3 h-3 text-slate-500"></i>
               </a>
-              <a href="mailto:divineprosper8@gmail.com" class="inline-flex items-center gap-2 rounded-md border border-neutral-700 bg-neutral-900 px-4 py-2.5 text-neutral-200 font-medium text-sm hover:bg-neutral-800 hover:border-neutral-600 focus:outline-none focus:ring-2 focus:ring-yellow-400/30 transition-colors">
-                <i data-lucide="mail" class="w-4 h-4"></i>
-                divineprosper8@gmail.com
+              <a href="https://wa.me/2349065117461?text=Hi%20Divine%2C%20I%27d%20like%20to%20collaborate%20with%20you%20on%20content%2Fhosting!" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg text-xs font-medium bg-brand-surface border border-brand-border hover:border-emerald-500 text-slate-300 hover:text-white transition-all flex items-center gap-2">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+                <span>WhatsApp</span>
               </a>
-              <a href="tel:09065117461" class="inline-flex items-center gap-2 rounded-md border border-neutral-700 bg-neutral-900 px-4 py-2.5 text-neutral-200 font-medium text-sm hover:bg-neutral-800 hover:border-neutral-600 focus:outline-none focus:ring-2 focus:ring-yellow-400/30 transition-colors">
-                <i data-lucide="phone" class="w-4 h-4"></i>
-                0906 511 7461
+              <a href="mailto:divineprosper8@gmail.com" class="px-3.5 py-2 rounded-lg text-xs font-medium bg-brand-surface border border-brand-border hover:border-brand-accent text-slate-300 hover:text-white transition-all flex items-center gap-2">
+                <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-accent"></i>
+                <span>divineprosper8@gmail.com</span>
               </a>
             </div>
 
-            <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div class="rounded-lg border border-neutral-800 bg-neutral-900/40 px-4 py-3">
-                <div class="text-xs text-neutral-400">Location</div>
-                <div class="mt-1 text-sm font-medium text-neutral-200">Lagos, Nigeria</div>
+            <!-- Stats Counters -->
+            <div class="pt-3 grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <div class="p-3.5 rounded-xl bg-brand-surface border border-brand-border">
+                <div class="text-2xl sm:text-3xl font-heading font-bold text-white counter" data-target="6" data-suffix="M+">0</div>
+                <div class="text-xs text-brand-muted mt-0.5">X Impressions</div>
               </div>
-              <div class="rounded-lg border border-neutral-800 bg-neutral-900/40 px-4 py-3">
-                <div class="text-xs text-neutral-400">Experience</div>
-                <div class="mt-1 text-sm font-medium text-neutral-200">3+ Years</div>
+              <div class="p-3.5 rounded-xl bg-brand-surface border border-brand-border">
+                <div class="text-2xl sm:text-3xl font-heading font-bold text-white counter" data-target="150" data-suffix="+">0</div>
+                <div class="text-xs text-brand-muted mt-0.5">Live Spaces</div>
               </div>
-              <div class="rounded-lg border border-neutral-800 bg-neutral-900/40 px-4 py-3">
-                <div class="text-xs text-neutral-400">X Impressions</div>
-                <div class="mt-1 text-sm font-medium text-neutral-200">6M+</div>
+              <div class="p-3.5 rounded-xl bg-brand-surface border border-brand-border">
+                <div class="text-2xl sm:text-3xl font-heading font-bold text-brand-accent counter" data-target="1000" data-prefix="0→" data-suffix="+">0</div>
+                <div class="text-xs text-brand-muted mt-0.5">TikTok Growth</div>
               </div>
-              <div class="rounded-lg border border-neutral-800 bg-neutral-900/40 px-4 py-3">
-                <div class="text-xs text-neutral-400">GM Solana Episodes</div>
-                <div class="mt-1 text-sm font-medium text-neutral-200">150+</div>
+              <div class="p-3.5 rounded-xl bg-brand-surface border border-brand-border">
+                <div class="text-2xl sm:text-3xl font-heading font-bold text-slate-300 counter" data-target="3" data-suffix="+ Yrs">0</div>
+                <div class="text-xs text-brand-muted mt-0.5">Experience</div>
               </div>
             </div>
+
           </div>
 
-          <div class="relative">
-            <div class="mx-auto w-full max-w-md">
-              <div class="relative rounded-2xl border border-yellow-400/20 bg-neutral-900 p-2 shadow-[0_0_0_1px_rgba(250,204,21,0.08)]">
-                <img src="https://47yv34ga2z.ufs.sh/f/2NpRwKYeHhfNP2MxBQhlCbgNZvrOQ5Y0fpnEK2i6LGVHzB1I" alt="Portrait of Divine (Deevine)" class="aspect-square w-full rounded-xl object-cover">
-                <div class="absolute bottom-3 left-3 right-3 rounded-lg bg-neutral-950/70 backdrop-blur border border-neutral-800 px-3 py-2 flex items-center justify-between">
-                  <div class="flex items-center gap-2">
-                    <span class="inline-flex h-2 w-2 rounded-full bg-yellow-400"></span>
-                    <span class="text-xs text-neutral-300">Available for campaigns, hosting &amp; content</span>
+          <!-- Hero Image & Interactive Frame (Right 5 cols) -->
+          <div class="lg:col-span-5 relative reveal reveal-delay-1">
+            
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              
+              <!-- Hero Image Frame (MAINTAINING CURRENT HERO IMAGE) -->
+              <div class="relative rounded-2xl border border-brand-border bg-brand-surface p-2 shadow-2xl overflow-hidden">
+                
+                <!-- Main photo -->
+                <div class="relative overflow-hidden rounded-xl bg-brand-dark">
+                  <img 
+                    src="https://47yv34ga2z.ufs.sh/f/2NpRwKYeHhfNP2MxBQhlCbgNZvrOQ5Y0fpnEK2i6LGVHzB1I" 
+                    alt="Divine Ejikeme — Content Creator &amp; On-Camera Host" 
+                    class="w-full aspect-[4/5] object-cover object-center rounded-xl"
+                    loading="eager"
+                  >
+                  
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none"></div>
+
+                  <!-- Floating Badge 1: Top Left -->
+                  <div class="absolute top-3.5 left-3.5 bg-brand-black/90 border border-white/10 px-3 py-1 rounded-md flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
+                    <span class="text-xs font-semibold text-white">On-Camera Host</span>
                   </div>
-                  <i data-lucide="camera" class="w-4 h-4 text-neutral-400"></i>
+
+                  <!-- Floating Badge 2: Top Right -->
+                  <div class="absolute top-3.5 right-3.5 bg-brand-black/90 border border-white/10 px-3 py-1 rounded-md flex items-center gap-1.5">
+                    <i data-lucide="camera" class="w-3.5 h-3.5 text-brand-accent"></i>
+                    <span class="text-xs font-semibold text-slate-300">Cinematographer</span>
+                  </div>
+
+                  <!-- Interactive GM Solana Space Player Simulation -->
+                  <div id="spacePlayer" class="absolute bottom-3 left-3 right-3 rounded-xl bg-brand-black/95 border border-brand-border p-3 shadow-xl">
+                    <div class="flex items-center justify-between gap-3">
+                      <div class="flex items-center gap-3">
+                        <button id="playSpaceBtn" onclick="toggleSpaceAudio()" class="h-9 w-9 rounded-lg bg-brand-accent text-brand-black flex items-center justify-center font-bold hover:bg-brand-accentHover transition-all shrink-0">
+                          <i id="playIcon" data-lucide="play" class="w-4 h-4 fill-current"></i>
+                        </button>
+                        <div>
+                          <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold text-white uppercase tracking-wider">GM Solana Live Host</span>
+                            <span id="liveTag" class="px-1.5 py-0.2 rounded text-[10px] font-semibold bg-brand-surface text-brand-accent border border-brand-border">150+ EPS</span>
+                          </div>
+                          <p id="spaceStatus" class="text-[11px] text-brand-muted">Tap to listen to host simulation</p>
+                        </div>
+                      </div>
+                      
+                      <!-- Animated Audio Waveform -->
+                      <div id="waveBars" class="flex items-end gap-1 h-5 px-2">
+                        <span class="wave-bar h-2"></span>
+                        <span class="wave-bar h-3"></span>
+                        <span class="wave-bar h-2"></span>
+                        <span class="wave-bar h-4"></span>
+                        <span class="wave-bar h-1.5"></span>
+                        <span class="wave-bar h-3"></span>
+                      </div>
+                    </div>
+
+                    <!-- Progress bar -->
+                    <div class="mt-2.5 pt-2 border-t border-brand-border flex items-center justify-between text-[10px] text-brand-muted">
+                      <span id="audioTimer">00:00</span>
+                      <div class="flex-1 mx-3 h-1 bg-brand-surface rounded-full overflow-hidden">
+                        <div id="audioProgress" class="h-full bg-brand-accent w-0 transition-all duration-300"></div>
+                      </div>
+                      <span>01:45</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- Metadata pills under frame -->
+              <div class="mt-3 grid grid-cols-3 gap-2 text-center text-xs">
+                <div class="p-2 rounded-lg bg-brand-surface border border-brand-border">
+                  <span class="text-[10px] text-brand-muted block">Format</span>
+                  <span class="font-semibold text-white">Short-Form Video</span>
+                </div>
+                <div class="p-2 rounded-lg bg-brand-surface border border-brand-border">
+                  <span class="text-[10px] text-brand-muted block">Tone</span>
+                  <span class="font-semibold text-brand-accent">Relatable Naija</span>
+                </div>
+                <div class="p-2 rounded-lg bg-brand-surface border border-brand-border">
+                  <span class="text-[10px] text-brand-muted block">Pacing</span>
+                  <span class="font-semibold text-white">High Retention</span>
                 </div>
               </div>
-              <div class="mt-4 grid grid-cols-3 gap-3">
-                <div class="rounded-lg border border-neutral-800 bg-neutral-900/70 px-3 py-2">
-                  <div class="text-[10px] uppercase tracking-wide text-neutral-400">TikTok</div>
-                  <div class="text-sm font-medium text-neutral-100">0→300</div>
-                </div>
-                <div class="rounded-lg border border-neutral-800 bg-neutral-900/70 px-3 py-2">
-                  <div class="text-[10px] uppercase tracking-wide text-neutral-400">One-liner</div>
-                  <div class="text-sm font-medium text-neutral-100">Relatable</div>
-                </div>
-                <div class="rounded-lg border border-neutral-800 bg-neutral-900/70 px-3 py-2">
-                  <div class="text-[10px] uppercase tracking-wide text-neutral-400">Hosting</div>
-                  <div class="text-sm font-medium text-neutral-100">GM Solana</div>
-                </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CHAPTER 1: ROOTS & LENS -->
+    <section id="chapter-origin" class="py-16 sm:py-24 border-t border-brand-borderMuted bg-brand-dark/40">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12 reveal">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-brand-surface border border-brand-border text-brand-accent mb-3">
+            <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Chapter 01 · Roots &amp; The Camera Eye
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight">
+            "Before the viral videos, there was History and a camera."
+          </h2>
+          <p class="mt-2.5 text-slate-300 text-base leading-relaxed">
+            Good storytelling isn't luck. It's understanding human psychology, narrative pacing, and how to hold attention from the first second.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+          
+          <!-- Education & Academic Roots (assets/images/page4_X6.jpg) -->
+          <div class="lg:col-span-4 rounded-xl bg-brand-surface border border-brand-border overflow-hidden flex flex-col group editorial-card reveal">
+            <div class="relative h-60 overflow-hidden bg-brand-black cursor-pointer" onclick="openLightbox('assets/images/page4_X6.jpg', 'University of Nigeria, Nsukka — BA History &amp; International Studies')">
+              <img src="assets/images/page4_X6.jpg" alt="University of Nigeria Nsukka Degree" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent"></div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded bg-brand-black/90 border border-white/10 text-brand-accent text-[11px] font-bold">
+                2020 – 2024
+              </div>
+              <div class="absolute top-3 right-3 px-2.5 py-1 rounded bg-brand-black/90 text-[11px] font-medium text-slate-300 border border-white/10 flex items-center gap-1">
+                <i data-lucide="maximize-2" class="w-3 h-3"></i> View Slide
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Education</span>
+                <h3 class="mt-1 text-lg font-heading font-bold text-white">University of Nigeria, Nsukka</h3>
+                <p class="text-xs text-brand-muted mt-0.5 font-medium">BA History &amp; International Studies</p>
+                <p class="mt-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  Studying history taught Divine how stories spread, why movements catch fire, and how to simplify complex subjects so everyday people relate to them.
+                </p>
+              </div>
+              <div class="mt-4 pt-4 border-t border-brand-border flex flex-wrap gap-1.5">
+                <span class="text-[11px] bg-brand-card px-2.5 py-1 rounded text-slate-300">Narrative Analysis</span>
+                <span class="text-[11px] bg-brand-card px-2.5 py-1 rounded text-slate-300">Cultural Context</span>
+                <span class="text-[11px] bg-brand-card px-2.5 py-1 rounded text-slate-300">Clear Writing</span>
               </div>
             </div>
           </div>
+
+          <!-- Cinematography Eye (assets/images/page2_X5.jpg) -->
+          <div class="lg:col-span-4 rounded-xl bg-brand-surface border border-brand-border overflow-hidden flex flex-col group editorial-card reveal reveal-delay-1">
+            <div class="relative h-60 overflow-hidden bg-brand-black cursor-pointer" onclick="openLightbox('assets/images/page2_X5.jpg', 'Cinematography &amp; Visual Framing')">
+              <img src="assets/images/page2_X5.jpg" alt="Cinematography and Lens Craft" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent"></div>
+              <div class="absolute top-3 right-3 px-2.5 py-1 rounded bg-brand-black/90 text-[11px] font-medium text-slate-300 border border-white/10 flex items-center gap-1">
+                <i data-lucide="maximize-2" class="w-3 h-3"></i> View
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Visual Discipline</span>
+                <h3 class="mt-1 text-lg font-heading font-bold text-white">Cinematography Background</h3>
+                <p class="text-xs text-brand-muted mt-0.5 font-medium">Lighting · Camera Eye · Sound · Pacing</p>
+                <p class="mt-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  Every video is framed with intent: clean lighting, crisp wireless audio, sharp color contrast, and micro-cuts that eliminate dead air.
+                </p>
+              </div>
+              <div class="mt-4 pt-4 border-t border-brand-border flex items-center justify-between text-xs text-brand-muted">
+                <span class="flex items-center gap-1.5 text-slate-300"><i data-lucide="camera" class="w-3.5 h-3.5 text-brand-accent"></i> Pro Video Setup</span>
+                <span class="text-brand-accent font-medium">High Polish</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Personal Presentation Card (assets/images/page3_X5.jpg) -->
+          <div class="lg:col-span-4 rounded-xl bg-brand-surface border border-brand-border overflow-hidden flex flex-col group editorial-card reveal reveal-delay-2">
+            <div class="relative h-60 overflow-hidden bg-brand-black cursor-pointer" onclick="openLightbox('assets/images/page3_X5.jpg', 'Divine Ejikeme — Personal Presentation')">
+              <img src="assets/images/page3_X5.jpg" alt="Divine Presentation Photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent"></div>
+              <div class="absolute top-3 right-3 px-2.5 py-1 rounded bg-brand-black/90 text-[11px] font-medium text-slate-300 border border-white/10 flex items-center gap-1">
+                <i data-lucide="maximize-2" class="w-3 h-3"></i> View
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Meet Divine</span>
+                <h3 class="mt-1 text-lg font-heading font-bold text-white">"Hello, I'm Divine."</h3>
+                <p class="text-xs text-brand-muted mt-0.5 font-medium">Authenticity Over Empty Views</p>
+                <p class="mt-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  "I love helping brands turn what they do into fun, engaging stories that real people care about. No empty vanity metrics — just real community."
+                </p>
+              </div>
+              <div class="mt-4 pt-4 border-t border-brand-border flex items-center justify-between text-xs text-brand-muted">
+                <span class="flex items-center gap-1.5 text-slate-300"><i data-lucide="users" class="w-3.5 h-3.5 text-emerald-400"></i> Community First</span>
+                <span class="text-brand-accent font-medium">Lagos Native</span>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Key Metrics -->
-        <div class="mt-14 border-t border-neutral-900 pt-8">
-          <div class="text-xs text-neutral-400 mb-4">Key Metrics</div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 2: THE LAGOS VIBE -->
+    <section id="chapter-bridge" class="py-16 sm:py-24 border-t border-brand-borderMuted">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Narrative Story Flow (7 cols) -->
+          <div class="lg:col-span-7 space-y-5 reveal">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-brand-surface border border-brand-border text-brand-accent">
+              <i data-lucide="zap" class="w-3.5 h-3.5"></i> Chapter 02 · The Lagos Vibe
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight leading-tight">
+              Taking complex ideas and making them <span class="text-brand-accent">relatable &amp; fun.</span>
+            </h2>
+
+            <p class="text-slate-300 text-base leading-relaxed">
+              When Web3 and new tech started taking off in Nigeria, most projects sounded like instruction manuals. Nobody was explaining what this stuff actually meant for everyday life. Divine stepped in with short skits, relatable humor, and clear talk.
+            </p>
+
+            <!-- Clean side by side comparison -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+              
+              <div class="p-4 rounded-xl bg-brand-surface border border-brand-border flex items-start gap-3">
+                <div class="h-8 w-8 rounded-lg bg-brand-card text-rose-400 flex items-center justify-center shrink-0 mt-0.5 border border-brand-border">
+                  <i data-lucide="x" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">The Typical Tech Pitch</h4>
+                  <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                    Dry charts, complicated jargon, and boring monologues that lose the viewer in 3 seconds.
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-brand-surface border border-brand-border flex items-start gap-3">
+                <div class="h-8 w-8 rounded-lg bg-brand-card text-brand-accent flex items-center justify-center shrink-0 mt-0.5 border border-brand-border">
+                  <i data-lucide="sparkles" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-brand-accent">Divine's Style</h4>
+                  <p class="text-xs text-slate-200 mt-1 leading-relaxed">
+                    Lagos humor, quick skits, and everyday analogies that make you laugh and understand instantly.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <blockquote class="p-3.5 rounded-lg border-l-2 border-brand-accent bg-brand-surface text-xs text-slate-300 italic">
+              "If people can't smile and get it in 30 seconds, they'll just scroll. Content has to feel alive."
+            </blockquote>
+
+          </div>
+
+          <!-- Visual Showcase (5 cols) page6_X5.jpg -->
+          <div class="lg:col-span-5 space-y-3.5 reveal reveal-delay-1">
+            <div class="relative rounded-xl overflow-hidden border border-brand-border bg-brand-black group cursor-pointer shadow-xl" onclick="openLightbox('assets/images/page6_X5.jpg', 'Work Experience &amp; Cultural Execution')">
+              <img src="assets/images/page6_X5.jpg" alt="Work Experience Overview" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3.5 left-3.5 right-3.5 flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-bold text-brand-accent uppercase tracking-wide">Experience Slide</span>
+                  <p class="text-sm font-heading font-bold text-white">Creator &amp; Host Track Record</p>
+                </div>
+                <span class="px-2.5 py-1 rounded bg-white text-brand-black text-xs font-bold flex items-center gap-1">
+                  <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> Inspect
+                </span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="h-8 w-8 rounded-lg bg-brand-card text-brand-accent flex items-center justify-center font-bold text-xs border border-brand-border">
+                  6M
+                </div>
+                <div>
+                  <h5 class="text-xs font-semibold text-white">Organic Reach Record</h5>
+                  <p class="text-[11px] text-brand-muted">Across ecosystem tweets, skits &amp; Spaces</p>
+                </div>
+              </div>
+              <span class="text-xs font-medium text-brand-accent">Zero Paid Ads</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CHAPTER 3: RESULTS & CASE STUDIES -->
+    <section id="chapter-proof" class="py-16 sm:py-24 border-t border-brand-borderMuted bg-brand-dark/40">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12 reveal">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-brand-surface border border-brand-border text-brand-accent mb-3">
+            <i data-lucide="award" class="w-3.5 h-3.5"></i> Chapter 03 · Proof of Work
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight">
+            "Real growth you can actually verify."
+          </h2>
+          <p class="mt-2 text-slate-300 text-base">
+            A look at real accounts grown, communities built, and campaigns hosted.
+          </p>
+        </div>
+
+        <!-- CASE STUDY 1: SuperteamNG TikTok Organic Growth -->
+        <div class="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 mb-8 shadow-xl relative overflow-hidden reveal">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left Info (6 cols) -->
+            <div class="lg:col-span-6 space-y-4">
+              
+              <div class="flex items-center gap-3">
+                <img src="assets/images/page8_X4.png" alt="SuperteamNG Logo" class="h-10 w-10 object-contain rounded-lg bg-brand-card p-1 border border-brand-border">
+                <div>
+                  <span class="text-[11px] font-bold uppercase tracking-wider text-brand-accent">Case Study 01 · TikTok Management</span>
+                  <h3 class="text-xl sm:text-2xl font-heading font-bold text-white">SuperteamNG TikTok Growth</h3>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed">
+                <strong class="text-white">The Challenge:</strong> SuperteamNG had a quiet TikTok account with only ~20 followers and little engagement.
+              </p>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                <strong class="text-white">What Divine Did:</strong> Took charge of video ideas, on-camera delivery, and relatable storytelling to explain Solana to the African creator community.
+              </p>
+
+              <!-- Stat callouts -->
+              <div class="grid grid-cols-2 gap-3 pt-1">
+                <div class="p-3 rounded-lg bg-brand-card border border-brand-border">
+                  <div class="text-[11px] text-brand-muted">Started At</div>
+                  <div class="text-xl font-heading font-bold text-slate-300">~20 Followers</div>
+                  <div class="text-[10px] text-brand-muted mt-0.5">Dormant account</div>
+                </div>
+                <div class="p-3 rounded-lg bg-brand-card border border-brand-accent/40">
+                  <div class="text-[11px] text-brand-accent font-semibold">Organic Result</div>
+                  <div class="text-xl font-heading font-bold text-brand-accent">1,000+ Followers</div>
+                  <div class="text-[10px] text-emerald-400 mt-0.5">0→300 in 30 Days · $0 Ads</div>
+                </div>
+              </div>
+
+              <div class="pt-1">
+                <button onclick="likeCaseStudy(this, 'SuperteamNG')" class="px-3.5 py-1.5 rounded-lg bg-brand-card border border-brand-border hover:border-rose-500 text-xs font-semibold text-slate-300 hover:text-rose-400 transition-all flex items-center gap-2 group">
+                  <i data-lucide="heart" class="w-3.5 h-3.5 text-rose-400 group-hover:scale-125 transition-transform"></i>
+                  <span>Cheer Campaign</span>
+                  <span class="like-count font-bold text-white ml-1">128</span>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Right Visual Gallery (6 cols) -->
+            <div class="lg:col-span-6 space-y-3">
+              <div class="grid grid-cols-2 gap-3">
+                
+                <div class="relative rounded-xl overflow-hidden border border-brand-border bg-brand-black group cursor-pointer" onclick="openLightbox('assets/images/page8_X6.png', 'SuperteamNG TikTok Growth Metrics')">
+                  <img src="assets/images/page8_X6.png" alt="SuperteamNG TikTok Evidence" class="w-full h-44 sm:h-48 object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-xs text-slate-300">
+                    <span class="font-medium text-[11px]">Account Proof</span>
+                    <span class="text-brand-accent text-[10px] flex items-center gap-1"><i data-lucide="zoom-in" class="w-3 h-3"></i> Enlarge</span>
+                  </div>
+                </div>
+
+                <div class="relative rounded-xl overflow-hidden border border-brand-border bg-brand-black group cursor-pointer" onclick="openLightbox('assets/images/page8_X9.png', 'SuperteamNG Content Performance')">
+                  <img src="assets/images/page8_X9.png" alt="SuperteamNG Content Performance" class="w-full h-44 sm:h-48 object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-xs text-slate-300">
+                    <span class="font-medium text-[11px]">Video Reach</span>
+                    <span class="text-brand-accent text-[10px] flex items-center gap-1"><i data-lucide="zoom-in" class="w-3 h-3"></i> Enlarge</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Deck Graphic page7_X11.jpg -->
+              <div class="rounded-xl overflow-hidden border border-brand-border bg-brand-card p-3 flex items-center justify-between cursor-pointer hover:border-brand-accent transition-all" onclick="openLightbox('assets/images/page7_X11.jpg', 'SuperteamNG Project Showcase')">
+                <div class="flex items-center gap-3">
+                  <img src="assets/images/page7_X11.jpg" alt="SuperteamNG Feature" class="w-14 h-10 rounded object-cover">
+                  <div>
+                    <h5 class="text-xs font-semibold text-white">Full SuperteamNG Showcase Slide</h5>
+                    <p class="text-[11px] text-brand-muted">Click to view campaign graphic</p>
+                  </div>
+                </div>
+                <i data-lucide="external-link" class="w-4 h-4 text-brand-accent"></i>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CASE STUDY 2: Bread Africa -->
+        <div class="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 mb-8 shadow-xl relative overflow-hidden reveal">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left Image page9_X8.jpg -->
+            <div class="lg:col-span-6 order-2 lg:order-1">
+              <div class="relative rounded-xl overflow-hidden border border-brand-border bg-brand-black group cursor-pointer shadow-lg" onclick="openLightbox('assets/images/page9_X8.jpg', 'Bread Africa — Audience Growth Case Study')">
+                <img src="assets/images/page9_X8.jpg" alt="Bread Africa Case Study Proof" class="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                  <div class="bg-brand-black/90 px-2.5 py-1 rounded border border-white/10">
+                    <p class="text-xs font-semibold text-white">Bread Africa Growth Deck</p>
+                    <p class="text-[10px] text-brand-accent">+50% Follower Surge</p>
+                  </div>
+                  <span class="px-2.5 py-1 rounded bg-white text-brand-black text-xs font-bold flex items-center gap-1">
+                    <i data-lucide="maximize" class="w-3 h-3"></i> Inspect
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Info (6 cols) -->
+            <div class="lg:col-span-6 order-1 lg:order-2 space-y-4">
+              
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-brand-accent">Case Study 02 · Community Building</span>
+                <h3 class="text-xl sm:text-2xl font-heading font-bold text-white mt-0.5">Bread Africa: +50% Follower Surge</h3>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed">
+                <strong class="text-white">The Goal:</strong> Help Bread Africa build an active following on X and attract crypto builders across Africa.
+              </p>
+
+              <!-- Highlights -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                <div class="p-3 rounded-lg bg-brand-card border border-brand-border">
+                  <div class="text-brand-accent text-xl font-heading font-bold">+50%</div>
+                  <div class="text-xs text-slate-200 font-medium mt-0.5">Audience Growth</div>
+                  <p class="text-[11px] text-brand-muted mt-0.5">Consistent community expansion.</p>
+                </div>
+                <div class="p-3 rounded-lg bg-brand-card border border-brand-border">
+                  <div class="text-white text-xl font-heading font-bold">Weekly Spaces</div>
+                  <div class="text-xs text-slate-200 font-medium mt-0.5">Live Audio Community</div>
+                  <p class="text-[11px] text-brand-muted mt-0.5">High-retention voice rooms.</p>
+                </div>
+              </div>
+
+              <div class="pt-1">
+                <button onclick="likeCaseStudy(this, 'Bread Africa')" class="px-3.5 py-1.5 rounded-lg bg-brand-card border border-brand-border hover:border-rose-500 text-xs font-semibold text-slate-300 hover:text-rose-400 transition-all flex items-center gap-2 group">
+                  <i data-lucide="heart" class="w-3.5 h-3.5 text-rose-400 group-hover:scale-125 transition-transform"></i>
+                  <span>Cheer Campaign</span>
+                  <span class="like-count font-bold text-white ml-1">94</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CASE STUDY 3: GM Solana & Solflare x Airbills -->
+        <div class="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-xl relative reveal">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            
+            <div class="lg:col-span-7 space-y-3">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-xs font-semibold bg-brand-card border border-brand-border text-brand-accent">
+                <i data-lucide="radio" class="w-3.5 h-3.5"></i> Live Voice &amp; Ecosystem Campaigns
+              </div>
+              <h3 class="text-xl sm:text-2xl font-heading font-bold text-white">GM Solana Morning Spaces &amp; Solflare Campaign</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Co-hosting <strong class="text-brand-accent font-semibold">150+ live audio episodes</strong> made Divine a familiar voice in the ecosystem. Featured partner for the Solflare x Airbills campaign.
+              </p>
+              <div class="flex flex-wrap items-center gap-3 text-xs text-brand-muted pt-1">
+                <span class="flex items-center gap-1 text-slate-200"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> 150+ Live Rooms</span>
+                <span class="flex items-center gap-1 text-slate-200"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Loyal Listeners</span>
+                <span class="flex items-center gap-1 text-slate-200"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Founder Interviews</span>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5">
+              <div class="rounded-xl overflow-hidden border border-brand-border bg-brand-black p-2 shadow-lg cursor-pointer group" onclick="openLightbox('assets/images/testimonial-solflare-airbills.png', 'Solflare Airbills Campaign Evidence')">
+                <img src="assets/images/testimonial-solflare-airbills.png" alt="Solflare Airbills Campaign" class="w-full h-auto rounded-lg group-hover:scale-[1.01] transition-transform duration-200">
+                <div class="mt-2 px-1 flex items-center justify-between text-xs text-brand-muted">
+                  <span>Campaign Partner Asset</span>
+                  <span class="text-brand-accent flex items-center gap-1"><i data-lucide="zoom-in" class="w-3 h-3"></i> View</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CHAPTER 4: CREATIVE SKILLS & GEAR -->
+    <section id="chapter-method" class="py-16 sm:py-24 border-t border-brand-borderMuted">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-brand-surface border border-brand-border text-brand-accent mb-3">
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i> Chapter 04 · The Creative Pipeline
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight">
+            How Divine Brings Videos to Life
+          </h2>
+          <p class="mt-2 text-brand-muted text-sm sm:text-base">
+            From the initial hook idea to the final cut and community chat.
+          </p>
+        </div>
+
+        <!-- 4 Steps -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+          
+          <div class="p-5 rounded-xl bg-brand-surface border border-brand-border flex flex-col justify-between editorial-card reveal">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-2xl font-heading font-bold text-brand-accent">01</span>
+                <div class="h-8 w-8 rounded-lg bg-brand-card text-brand-accent flex items-center justify-center border border-brand-border">
+                  <i data-lucide="lightbulb" class="w-4 h-4"></i>
+                </div>
+              </div>
+              <h3 class="text-base font-heading font-bold text-white">Find the Hook</h3>
+              <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
+                Spotting the funny, relatable angle that makes people stop scrolling and pay attention.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-border text-xs text-brand-muted">
+              <span class="text-brand-accent font-medium">Deliverable:</span> Script &amp; Concept
+            </div>
+          </div>
+
+          <div class="p-5 rounded-xl bg-brand-surface border border-brand-border flex flex-col justify-between editorial-card reveal reveal-delay-1">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-2xl font-heading font-bold text-brand-accent">02</span>
+                <div class="h-8 w-8 rounded-lg bg-brand-card text-brand-accent flex items-center justify-center border border-brand-border">
+                  <i data-lucide="video" class="w-4 h-4"></i>
+                </div>
+              </div>
+              <h3 class="text-base font-heading font-bold text-white">Shoot with Energy</h3>
+              <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
+                Crisp camera work, soft lighting, clear wireless audio, and confident on-camera delivery.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-border text-xs text-brand-muted">
+              <span class="text-brand-accent font-medium">Deliverable:</span> Pro Production
+            </div>
+          </div>
+
+          <div class="p-5 rounded-xl bg-brand-surface border border-brand-border flex flex-col justify-between editorial-card reveal reveal-delay-2">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-2xl font-heading font-bold text-brand-accent">03</span>
+                <div class="h-8 w-8 rounded-lg bg-brand-card text-brand-accent flex items-center justify-center border border-brand-border">
+                  <i data-lucide="scissors" class="w-4 h-4"></i>
+                </div>
+              </div>
+              <h3 class="text-base font-heading font-bold text-white">Fast-Paced Editing</h3>
+              <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
+                Snappy cuts, subtitles, sound effects, and smooth pacing built specifically for TikTok &amp; Reels.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-border text-xs text-brand-muted">
+              <span class="text-brand-accent font-medium">Deliverable:</span> 9:16 Video Cuts
+            </div>
+          </div>
+
+          <div class="p-5 rounded-xl bg-brand-surface border border-brand-border flex flex-col justify-between editorial-card reveal reveal-delay-3">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-2xl font-heading font-bold text-brand-accent">04</span>
+                <div class="h-8 w-8 rounded-lg bg-brand-card text-brand-accent flex items-center justify-center border border-brand-border">
+                  <i data-lucide="message-circle" class="w-4 h-4"></i>
+                </div>
+              </div>
+              <h3 class="text-base font-heading font-bold text-white">Engage Audience</h3>
+              <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
+                Replying in comments, hosting live voice Spaces, and turning viewers into an active community.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-border text-xs text-brand-muted">
+              <span class="text-brand-accent font-medium">Deliverable:</span> Community Fans
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Gear Stack -->
+        <div class="p-5 sm:p-6 rounded-2xl border border-brand-border bg-brand-surface mb-8 reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="h-8 w-8 rounded-lg bg-brand-card border border-brand-border text-brand-accent flex items-center justify-center">
+              <i data-lucide="sliders" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-heading font-bold text-white">Production Gear &amp; Software</h3>
+              <p class="text-xs text-brand-muted">The toolkit behind the quality</p>
+            </div>
+          </div>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <div class="rounded-lg border border-neutral-800 bg-neutral-900/50 px-5 py-4">
-              <div class="text-2xl font-semibold text-yellow-300">0 → 300</div>
-              <div class="mt-1 text-sm text-neutral-400">SuperteamNG TikTok organic followers in under 30 days — no paid promotion</div>
+            <div class="p-3.5 rounded-lg bg-brand-card border border-brand-border">
+              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wide">Camera &amp; Sound</span>
+              <h4 class="text-xs font-semibold text-white mt-1">Cinematography Setup</h4>
+              <p class="text-xs text-brand-muted mt-1">Mirrorless camera, 35mm prime lens, wireless dual lavaliers, softbox lighting.</p>
             </div>
-            <div class="rounded-lg border border-neutral-800 bg-neutral-900/50 px-5 py-4">
-              <div class="text-2xl font-semibold text-yellow-300">6M+</div>
-              <div class="mt-1 text-sm text-neutral-400">Impressions generated on X</div>
+            <div class="p-3.5 rounded-lg bg-brand-card border border-brand-border">
+              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wide">Editing</span>
+              <h4 class="text-xs font-semibold text-white mt-1">Post-Production</h4>
+              <p class="text-xs text-brand-muted mt-1">CapCut Pro &amp; Premiere for pacing, Adobe Suite, Canva Pro for bespoke thumbnails.</p>
             </div>
-            <div class="rounded-lg border border-neutral-800 bg-neutral-900/50 px-5 py-4">
-              <div class="text-2xl font-semibold text-yellow-300">150+</div>
-              <div class="mt-1 text-sm text-neutral-400">Episodes co-hosting the GM Solana X Space</div>
+            <div class="p-3.5 rounded-lg bg-brand-card border border-brand-border">
+              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wide">Management</span>
+              <h4 class="text-xs font-semibold text-white mt-1">Social Operations</h4>
+              <p class="text-xs text-brand-muted mt-1">X Spaces Audio Suite, Notion content calendars, and community analytics.</p>
             </div>
           </div>
         </div>
+
+        <!-- Resume Skills Matrix Graphic (assets/images/page5_X7.jpg) -->
+        <div class="rounded-xl border border-brand-border overflow-hidden bg-brand-surface p-4 flex flex-col sm:flex-row items-center justify-between gap-4 cursor-pointer hover:border-brand-accent transition-all reveal" onclick="openLightbox('assets/images/page5_X7.jpg', 'Personal Skills Slide')">
+          <div class="flex items-center gap-3.5">
+            <img src="assets/images/page5_X7.jpg" alt="Skills Graphic" class="w-16 h-12 rounded object-cover">
+            <div>
+              <h4 class="text-sm font-heading font-bold text-white">View Full Skills Matrix Slide from Resume</h4>
+              <p class="text-xs text-brand-muted">Content Creation · Videography · Community Building · Communication</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 text-xs font-medium text-brand-accent">
+            <span>Inspect Slide</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="py-14 sm:py-20 border-t border-neutral-900">
+    <!-- LIVE CONTENT FEED -->
+    <section id="feed" class="py-16 sm:py-24 border-t border-brand-borderMuted bg-brand-dark/40">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex items-end justify-between gap-6">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 reveal">
           <div>
-            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-white">What I do</h2>
-            <p class="mt-2 text-neutral-400 text-sm sm:text-base">Bringing culturally grounded Nigerian voices to web2 and web3 content briefs.</p>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-brand-surface border border-brand-border text-brand-accent mb-2">
+              <i data-lucide="play-circle" class="w-3.5 h-3.5"></i> Portfolio Feed
+            </div>
+            <h2 class="text-3xl font-heading font-bold text-white tracking-tight">
+              Featured Work on TikTok &amp; X
+            </h2>
+            <p class="text-brand-muted text-sm mt-1">
+              Tap to view live short-form videos and high-impact discussions.
+            </p>
+          </div>
+
+          <!-- Platform Filter Tabs -->
+          <div class="flex items-center gap-1 bg-brand-surface p-1 rounded-lg border border-brand-border self-start md:self-auto text-xs">
+            <button id="tabAll" onclick="filterContent('all')" class="content-tab-btn active px-3 py-1.5 rounded-md font-semibold bg-brand-accent text-brand-black transition-all">All</button>
+            <button id="tabTiktok" onclick="filterContent('tiktok')" class="content-tab-btn px-3 py-1.5 rounded-md font-medium text-slate-400 hover:text-white transition-all">TikTok Reels</button>
+            <button id="tabTwitter" onclick="filterContent('twitter')" class="content-tab-btn px-3 py-1.5 rounded-md font-medium text-slate-400 hover:text-white transition-all">X (Twitter)</button>
           </div>
         </div>
-        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="group rounded-xl border border-neutral-800 bg-neutral-900/50 p-5 hover:border-yellow-400/30 hover:bg-neutral-900 transition-colors">
-            <div class="flex items-center justify-between">
-              <div class="text-neutral-200 font-medium">Content Creation</div>
-              <i data-lucide="video" class="w-5 h-5 text-neutral-400 group-hover:text-yellow-300"></i>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          
+          <!-- TikTok 1 -->
+          <div class="content-card tiktok rounded-xl bg-brand-surface border border-brand-border p-5 hover:border-brand-accent transition-all flex flex-col justify-between editorial-card reveal">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-card text-rose-400 border border-brand-border">
+                  <i data-lucide="music-2" class="w-3 h-3"></i> TikTok Reel
+                </span>
+                <span class="text-xs text-brand-muted">@deevine_content</span>
+              </div>
+              <h4 class="text-base font-heading font-bold text-white">
+                Lagos Culture Meets Web3
+              </h4>
+              <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
+                Short-form video capturing everyday hustle in Lagos and linking it with crypto finance.
+              </p>
             </div>
-            <p class="mt-2 text-sm text-neutral-400">Short-form video, Reels, and TikToks that translate complex ideas into relatable, culturally grounded stories for everyday audiences.</p>
-          </div>
-          <div class="group rounded-xl border border-neutral-800 bg-neutral-900/50 p-5 hover:border-yellow-400/30 hover:bg-neutral-900 transition-colors">
-            <div class="flex items-center justify-between">
-              <div class="text-neutral-200 font-medium">Social Media Management</div>
-              <i data-lucide="bar-chart-2" class="w-5 h-5 text-neutral-400 group-hover:text-yellow-300"></i>
+            <div class="mt-5 pt-3.5 border-t border-brand-border flex items-center justify-between">
+              <span class="text-xs font-medium text-brand-accent">Viral Short</span>
+              <a href="https://vt.tiktok.com/ZSVnFDRTv" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-brand-card hover:bg-white hover:text-brand-black text-slate-300 text-xs font-medium transition-all flex items-center gap-1">
+                <span>Watch on TikTok</span>
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+              </a>
             </div>
-            <p class="mt-2 text-sm text-neutral-400">End-to-end TikTok strategy, content creation, scheduling, and community growth — trend-aware, story-first approach.</p>
           </div>
-          <div class="group rounded-xl border border-neutral-800 bg-neutral-900/50 p-5 hover:border-yellow-400/30 hover:bg-neutral-900 transition-colors">
-            <div class="flex items-center justify-between">
-              <div class="text-neutral-200 font-medium">On-Camera Hosting</div>
-              <i data-lucide="mic-2" class="w-5 h-5 text-neutral-400 group-hover:text-yellow-300"></i>
+
+          <!-- TikTok 2 -->
+          <div class="content-card tiktok rounded-xl bg-brand-surface border border-brand-border p-5 hover:border-brand-accent transition-all flex flex-col justify-between editorial-card reveal reveal-delay-1">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-card text-rose-400 border border-brand-border">
+                  <i data-lucide="music-2" class="w-3 h-3"></i> TikTok Reel
+                </span>
+                <span class="text-xs text-brand-muted">@deevine_content</span>
+              </div>
+              <h4 class="text-base font-heading font-bold text-white">
+                Crypto Without The Jargon
+              </h4>
+              <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
+                Breaking down crypto basics with simple, relatable street analogies.
+              </p>
             </div>
-            <p class="mt-2 text-sm text-neutral-400">X Spaces, live interviews, and panels — 150+ episodes connecting builders, brands, and users through live conversations.</p>
-          </div>
-          <div class="group rounded-xl border border-neutral-800 bg-neutral-900/50 p-5 hover:border-yellow-400/30 hover:bg-neutral-900 transition-colors">
-            <div class="flex items-center justify-between">
-              <div class="text-neutral-200 font-medium">Community Growth</div>
-              <i data-lucide="users" class="w-5 h-5 text-neutral-400 group-hover:text-yellow-300"></i>
+            <div class="mt-5 pt-3.5 border-t border-brand-border flex items-center justify-between">
+              <span class="text-xs font-medium text-brand-accent">Community Hit</span>
+              <a href="https://vt.tiktok.com/ZSVnFr3YY" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-brand-card hover:bg-white hover:text-brand-black text-slate-300 text-xs font-medium transition-all flex items-center gap-1">
+                <span>Watch on TikTok</span>
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+              </a>
             </div>
-            <p class="mt-2 text-sm text-neutral-400">Building and nurturing engaged communities through campaigns, events, and consistent social strategy across platforms.</p>
           </div>
-          <div class="group rounded-xl border border-neutral-800 bg-neutral-900/50 p-5 hover:border-yellow-400/30 hover:bg-neutral-900 transition-colors">
-            <div class="flex items-center justify-between">
-              <div class="text-neutral-200 font-medium">Web3 Content Education</div>
-              <i data-lucide="book-open" class="w-5 h-5 text-neutral-400 group-hover:text-yellow-300"></i>
+
+          <!-- TikTok 3 -->
+          <div class="content-card tiktok rounded-xl bg-brand-surface border border-brand-border p-5 hover:border-brand-accent transition-all flex flex-col justify-between editorial-card reveal reveal-delay-2">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-card text-rose-400 border border-brand-border">
+                  <i data-lucide="music-2" class="w-3 h-3"></i> TikTok Reel
+                </span>
+                <span class="text-xs text-brand-muted">@deevine_content</span>
+              </div>
+              <h4 class="text-base font-heading font-bold text-white">
+                On-Camera Humor &amp; Skits
+              </h4>
+              <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
+                Fast-cut creative sketch that drove record comments and shares.
+              </p>
             </div>
-            <p class="mt-2 text-sm text-neutral-400">Breaking down Solana and Web3 concepts into everyday Nigerian street culture — making the ecosystem accessible and relatable.</p>
-          </div>
-          <div class="group rounded-xl border border-neutral-800 bg-neutral-900/50 p-5 hover:border-yellow-400/30 hover:bg-neutral-900 transition-colors">
-            <div class="flex items-center justify-between">
-              <div class="text-neutral-200 font-medium">Cinematography</div>
-              <i data-lucide="aperture" class="w-5 h-5 text-neutral-400 group-hover:text-yellow-300"></i>
+            <div class="mt-5 pt-3.5 border-t border-brand-border flex items-center justify-between">
+              <span class="text-xs font-medium text-brand-accent">High Engagement</span>
+              <a href="https://vt.tiktok.com/ZSVnFt4xw" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-brand-card hover:bg-white hover:text-brand-black text-slate-300 text-xs font-medium transition-all flex items-center gap-1">
+                <span>Watch on TikTok</span>
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+              </a>
             </div>
-            <p class="mt-2 text-sm text-neutral-400">Sharp, intentional camera eye from a cinematography background — elevating production quality for every piece of content.</p>
           </div>
+
+          <!-- X Post 1 -->
+          <div class="content-card twitter rounded-xl bg-brand-surface border border-brand-border p-5 hover:border-brand-accent transition-all flex flex-col justify-between editorial-card reveal">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-card text-sky-400 border border-brand-border">
+                  <i data-lucide="twitter" class="w-3 h-3"></i> X Space Session
+                </span>
+                <span class="text-xs text-brand-muted">@D_deevine</span>
+              </div>
+              <h4 class="text-base font-heading font-bold text-white">
+                GM Solana Space Host
+              </h4>
+              <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
+                Live audio room hosting 500+ builders discussing product launches and creator opportunities.
+              </p>
+            </div>
+            <div class="mt-5 pt-3.5 border-t border-brand-border flex items-center justify-between">
+              <span class="text-xs font-medium text-brand-accent">150+ Episodes</span>
+              <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-brand-card hover:bg-white hover:text-brand-black text-slate-300 text-xs font-medium transition-all flex items-center gap-1">
+                <span>View on X</span>
+                <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- X Post 2 -->
+          <div class="content-card twitter rounded-xl bg-brand-surface border border-brand-border p-5 hover:border-brand-accent transition-all flex flex-col justify-between editorial-card reveal reveal-delay-1">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-card text-sky-400 border border-brand-border">
+                  <i data-lucide="twitter" class="w-3 h-3"></i> X Viral Thread
+                </span>
+                <span class="text-xs text-brand-muted">@D_deevine</span>
+              </div>
+              <h4 class="text-base font-heading font-bold text-white">
+                African Creator Insights
+              </h4>
+              <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
+                Discussions breaking down youth adoption, creative freelancing, and digital culture in Lagos.
+              </p>
+            </div>
+            <div class="mt-5 pt-3.5 border-t border-brand-border flex items-center justify-between">
+              <span class="text-xs font-medium text-brand-accent">6M+ Impressions</span>
+              <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-brand-card hover:bg-white hover:text-brand-black text-slate-300 text-xs font-medium transition-all flex items-center gap-1">
+                <span>View on X</span>
+                <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- X Post 3 -->
+          <div class="content-card twitter rounded-xl bg-brand-surface border border-brand-border p-5 hover:border-brand-accent transition-all flex flex-col justify-between editorial-card reveal reveal-delay-2">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-card text-sky-400 border border-brand-border">
+                  <i data-lucide="twitter" class="w-3 h-3"></i> Community Hangout
+                </span>
+                <span class="text-xs text-brand-muted">@D_deevine</span>
+              </div>
+              <h4 class="text-base font-heading font-bold text-white">
+                Interactive Community Spaces
+              </h4>
+              <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
+                Regular voice discussions connecting creatives, developers, and tech enthusiasts.
+              </p>
+            </div>
+            <div class="mt-5 pt-3.5 border-t border-brand-border flex items-center justify-between">
+              <span class="text-xs font-medium text-brand-accent">Community Favorite</span>
+              <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-brand-card hover:bg-white hover:text-brand-black text-slate-300 text-xs font-medium transition-all flex items-center gap-1">
+                <span>View on X</span>
+                <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" class="py-14 sm:py-20 border-t border-neutral-900">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex items-end justify-between gap-6">
-          <div>
-            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-white">Experience</h2>
-            <p class="mt-2 text-neutral-400 text-sm sm:text-base">Roles, highlights, and community impact.</p>
-          </div>
-        </div>
-
-        <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <!-- Social Media Manager — SuperteamNG (TikTok) -->
-          <article class="rounded-xl border border-neutral-800 bg-neutral-900/50 p-6 hover:border-yellow-400/30 transition-colors">
-            <div class="flex items-center justify-between gap-4">
-              <div class="text-neutral-200 font-medium">Social Media Manager — SuperteamNG (TikTok)</div>
-              <span class="text-xs text-yellow-300 bg-yellow-400/10 border border-yellow-400/20 px-2 py-1 rounded">Present</span>
-            </div>
-            <ul class="mt-3 space-y-2 text-sm text-neutral-300 list-disc pl-5">
-              <li>Own end-to-end TikTok strategy, content creation, and community growth.</li>
-              <li>Built a trend-aware, story-first content approach translating Web3 concepts into Nigerian street culture.</li>
-              <li>Grew SuperteamNG's TikTok from 0 to 300 organic followers in under 30 days — no paid promotion.</li>
-              <li>Applied editing and photography tools to tell clear, relatable stories.</li>
-            </ul>
-          </article>
-
-          <!-- Co-Host — GM Solana X Space -->
-          <article class="rounded-xl border border-neutral-800 bg-neutral-900/50 p-6 hover:border-yellow-400/30 transition-colors">
-            <div class="flex items-center justify-between gap-4">
-              <div class="text-neutral-200 font-medium">Co-Host — GM Solana X Space</div>
-              <span class="text-xs text-yellow-300 bg-yellow-400/10 border border-yellow-400/20 px-2 py-1 rounded">150+ Episodes</span>
-            </div>
-            <ul class="mt-3 space-y-2 text-sm text-neutral-300 list-disc pl-5">
-              <li>150+ episodes hosting live audio conversations on Solana and Web3 topics.</li>
-              <li>Builds and sustains an engaged, recurring listener community of developers, designers, and creatives.</li>
-              <li>Features products, projects, and builders across the Solana ecosystem.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="py-14 sm:py-20 border-t border-neutral-900">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex items-end justify-between gap-6">
-          <div>
-            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-white">Skills</h2>
-            <p class="mt-2 text-neutral-400 text-sm sm:text-base">The tools and disciplines behind the work.</p>
-          </div>
-        </div>
-
-        <div class="mt-8 flex flex-wrap gap-3">
-          <span class="rounded-full border border-neutral-800 bg-neutral-900/50 px-4 py-2 text-sm text-neutral-200 hover:border-yellow-400/30 transition-colors">Content Strategy</span>
-          <span class="rounded-full border border-neutral-800 bg-neutral-900/50 px-4 py-2 text-sm text-neutral-200 hover:border-yellow-400/30 transition-colors">Short-Form Video</span>
-          <span class="rounded-full border border-neutral-800 bg-neutral-900/50 px-4 py-2 text-sm text-neutral-200 hover:border-yellow-400/30 transition-colors">On-Camera Hosting</span>
-          <span class="rounded-full border border-neutral-800 bg-neutral-900/50 px-4 py-2 text-sm text-neutral-200 hover:border-yellow-400/30 transition-colors">Community Growth</span>
-          <span class="rounded-full border border-neutral-800 bg-neutral-900/50 px-4 py-2 text-sm text-neutral-200 hover:border-yellow-400/30 transition-colors">Cinematography</span>
-          <span class="rounded-full border border-neutral-800 bg-neutral-900/50 px-4 py-2 text-sm text-neutral-200 hover:border-yellow-400/30 transition-colors">Trend Research</span>
-          <span class="rounded-full border border-neutral-800 bg-neutral-900/50 px-4 py-2 text-sm text-neutral-200 hover:border-yellow-400/30 transition-colors">Platform Analytics</span>
-          <span class="rounded-full border border-neutral-800 bg-neutral-900/50 px-4 py-2 text-sm text-neutral-200 hover:border-yellow-400/30 transition-colors">CapCut &amp; Canva</span>
-          <span class="rounded-full border border-neutral-800 bg-neutral-900/50 px-4 py-2 text-sm text-neutral-200 hover:border-yellow-400/30 transition-colors">Web3 / Solana Content Education</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Content -->
-    <section id="content" class="py-14 sm:py-20 border-t border-neutral-900">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex items-end justify-between gap-6">
-          <div>
-            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-white">Featured Content</h2>
-            <p class="mt-2 text-neutral-400 text-sm sm:text-base">A selection of work across TikTok and X.</p>
-          </div>
-        </div>
-
-        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- TikTok -->
-          <div>
-            <div class="flex items-center gap-2 mb-4">
-              <i data-lucide="music" class="w-5 h-5 text-yellow-300"></i>
-              <span class="text-neutral-200 font-medium">TikTok</span>
-              <span class="text-xs text-neutral-500">@deevine_content</span>
-            </div>
-            <div class="space-y-3">
-              <a href="https://vt.tiktok.com/ZSVnFDRTv" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between rounded-lg border border-neutral-800 bg-neutral-900/50 px-4 py-3 hover:border-yellow-400/30 hover:bg-neutral-900 transition-colors group">
-                <div class="flex items-center gap-3">
-                  <i data-lucide="play-circle" class="w-5 h-5 text-neutral-400 group-hover:text-yellow-300"></i>
-                  <span class="text-sm text-neutral-300">Watch on TikTok</span>
-                </div>
-                <i data-lucide="external-link" class="w-4 h-4 text-neutral-500 group-hover:text-yellow-300"></i>
-              </a>
-              <a href="https://vt.tiktok.com/ZSVnFr3YY" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between rounded-lg border border-neutral-800 bg-neutral-900/50 px-4 py-3 hover:border-yellow-400/30 hover:bg-neutral-900 transition-colors group">
-                <div class="flex items-center gap-3">
-                  <i data-lucide="play-circle" class="w-5 h-5 text-neutral-400 group-hover:text-yellow-300"></i>
-                  <span class="text-sm text-neutral-300">Watch on TikTok</span>
-                </div>
-                <i data-lucide="external-link" class="w-4 h-4 text-neutral-500 group-hover:text-yellow-300"></i>
-              </a>
-              <a href="https://vt.tiktok.com/ZSVnFt4xw" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between rounded-lg border border-neutral-800 bg-neutral-900/50 px-4 py-3 hover:border-yellow-400/30 hover:bg-neutral-900 transition-colors group">
-                <div class="flex items-center gap-3">
-                  <i data-lucide="play-circle" class="w-5 h-5 text-neutral-400 group-hover:text-yellow-300"></i>
-                  <span class="text-sm text-neutral-300">Watch on TikTok</span>
-                </div>
-                <i data-lucide="external-link" class="w-4 h-4 text-neutral-500 group-hover:text-yellow-300"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- X (Twitter) -->
-          <div>
-            <div class="flex items-center gap-2 mb-4">
-              <i data-lucide="twitter" class="w-5 h-5 text-yellow-300"></i>
-              <span class="text-neutral-200 font-medium">X (Twitter)</span>
-              <span class="text-xs text-neutral-500">@D_deevin</span>
-            </div>
-            <div class="space-y-3">
-              <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between rounded-lg border border-neutral-800 bg-neutral-900/50 px-4 py-3 hover:border-yellow-400/30 hover:bg-neutral-900 transition-colors group">
-                <div class="flex items-center gap-3">
-                  <i data-lucide="message-square" class="w-5 h-5 text-neutral-400 group-hover:text-yellow-300"></i>
-                  <span class="text-sm text-neutral-300">View post</span>
-                </div>
-                <i data-lucide="external-link" class="w-4 h-4 text-neutral-500 group-hover:text-yellow-300"></i>
-              </a>
-              <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between rounded-lg border border-neutral-800 bg-neutral-900/50 px-4 py-3 hover:border-yellow-400/30 hover:bg-neutral-900 transition-colors group">
-                <div class="flex items-center gap-3">
-                  <i data-lucide="message-square" class="w-5 h-5 text-neutral-400 group-hover:text-yellow-300"></i>
-                  <span class="text-sm text-neutral-300">View post</span>
-                </div>
-                <i data-lucide="external-link" class="w-4 h-4 text-neutral-500 group-hover:text-yellow-300"></i>
-              </a>
-              <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between rounded-lg border border-neutral-800 bg-neutral-900/50 px-4 py-3 hover:border-yellow-400/30 hover:bg-neutral-900 transition-colors group">
-                <div class="flex items-center gap-3">
-                  <i data-lucide="message-square" class="w-5 h-5 text-neutral-400 group-hover:text-yellow-300"></i>
-                  <span class="text-sm text-neutral-300">View post</span>
-                </div>
-                <i data-lucide="external-link" class="w-4 h-4 text-neutral-500 group-hover:text-yellow-300"></i>
-              </a>
-              <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between rounded-lg border border-neutral-800 bg-neutral-900/50 px-4 py-3 hover:border-yellow-400/30 hover:bg-neutral-900 transition-colors group">
-                <div class="flex items-center gap-3">
-                  <i data-lucide="message-square" class="w-5 h-5 text-neutral-400 group-hover:text-yellow-300"></i>
-                  <span class="text-sm text-neutral-300">View post</span>
-                </div>
-                <i data-lucide="external-link" class="w-4 h-4 text-neutral-500 group-hover:text-yellow-300"></i>
-              </a>
-              <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between rounded-lg border border-neutral-800 bg-neutral-900/50 px-4 py-3 hover:border-yellow-400/30 hover:bg-neutral-900 transition-colors group">
-                <div class="flex items-center gap-3">
-                  <i data-lucide="message-square" class="w-5 h-5 text-neutral-400 group-hover:text-yellow-300"></i>
-                  <span class="text-sm text-neutral-300">View post</span>
-                </div>
-                <i data-lucide="external-link" class="w-4 h-4 text-neutral-500 group-hover:text-yellow-300"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section id="contact" class="py-14 sm:py-20 border-t border-neutral-900">
+    <!-- CHAPTER 5: COLLAB BUILDER -->
+    <section id="interactive-hub" class="py-16 sm:py-24 border-t border-brand-borderMuted">
       <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div class="rounded-2xl border border-yellow-400/20 bg-neutral-900 p-8 sm:p-10">
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            <div class="lg:col-span-2">
-              <h3 class="text-2xl sm:text-3xl font-semibold tracking-tight text-white">Let's collaborate</h3>
-              <p class="mt-2 text-neutral-300 text-sm sm:text-base">Available for campaigns, hosting, content creation, and community growth projects.</p>
-
-              <div class="mt-6 flex flex-col sm:flex-row gap-3 flex-wrap">
-                <a href="mailto:divineprosper8@gmail.com" class="inline-flex items-center gap-2 rounded-md bg-yellow-400 px-5 py-3 text-neutral-900 font-medium hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-400/40 transition-colors">
-                  <i data-lucide="mail" class="w-5 h-5"></i>
-                  Email Divine
-                </a>
-                <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md border border-neutral-700 bg-neutral-950 px-5 py-3 text-neutral-200 font-medium hover:bg-neutral-900 hover:border-neutral-600 focus:outline-none focus:ring-2 focus:ring-yellow-400/30 transition-colors">
-                  <i data-lucide="twitter" class="w-5 h-5"></i>
-                  Follow on X
-                </a>
-                <a href="https://www.instagram.com/deevine_content" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md border border-neutral-700 bg-neutral-950 px-5 py-3 text-neutral-200 font-medium hover:bg-neutral-900 hover:border-neutral-600 focus:outline-none focus:ring-2 focus:ring-yellow-400/30 transition-colors">
-                  <i data-lucide="instagram" class="w-5 h-5"></i>
-                  Instagram
-                </a>
-                <a href="tel:09065117461" class="inline-flex items-center gap-2 rounded-md border border-neutral-700 bg-neutral-950 px-5 py-3 text-neutral-200 font-medium hover:bg-neutral-900 hover:border-neutral-600 focus:outline-none focus:ring-2 focus:ring-yellow-400/30 transition-colors">
-                  <i data-lucide="phone" class="w-5 h-5"></i>
-                  0906 511 7461
-                </a>
-              </div>
+        
+        <div class="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-10 shadow-2xl relative reveal">
+          
+          <div class="text-center max-w-2xl mx-auto mb-8">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-brand-card border border-brand-border text-brand-accent mb-2">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Chapter 05 · Work Together
             </div>
-            <div class="lg:col-span-1">
-              <div class="rounded-xl border border-neutral-800 bg-neutral-950 p-5">
-                <div class="flex items-center gap-2 text-neutral-200 font-medium">
-                  <i data-lucide="sparkles" class="w-5 h-5 text-yellow-300"></i>
-                  Value at a glance
-                </div>
-                <ul class="mt-3 space-y-2 text-sm text-neutral-300 list-disc pl-5">
-                  <li>3+ years across TikTok, Reels &amp; X</li>
-                  <li>Culturally grounded Nigerian voice</li>
-                  <li>Web3 content that connects</li>
-                </ul>
-              </div>
-            </div>
+            <h2 class="text-3xl font-heading font-bold text-white tracking-tight">
+              Let's Create Something Great
+            </h2>
+            <p class="mt-1 text-xs sm:text-sm text-brand-muted">
+              Select what your brand or project needs to build a direct proposal.
+            </p>
           </div>
+
+          <!-- Interactive Choices -->
+          <div class="space-y-5">
+            
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-brand-muted mb-2.5">
+                1. Select what you need:
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
+                
+                <label class="collab-option cursor-pointer p-3.5 rounded-lg border border-brand-border bg-brand-card hover:border-brand-accent transition-all flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" name="services" value="TikTok Video Package" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()" checked>
+                    <span class="text-xs sm:text-sm font-medium text-slate-200">TikTok &amp; Reels Videos</span>
+                  </div>
+                  <i data-lucide="video" class="w-4 h-4 text-brand-accent"></i>
+                </label>
+
+                <label class="collab-option cursor-pointer p-3.5 rounded-lg border border-brand-border bg-brand-card hover:border-brand-accent transition-all flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" name="services" value="Live Audio / Spaces Hosting" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()" checked>
+                    <span class="text-xs sm:text-sm font-medium text-slate-200">X Spaces Host</span>
+                  </div>
+                  <i data-lucide="mic-2" class="w-4 h-4 text-brand-accent"></i>
+                </label>
+
+                <label class="collab-option cursor-pointer p-3.5 rounded-lg border border-brand-border bg-brand-card hover:border-brand-accent transition-all flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" name="services" value="Social Media Management" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()">
+                    <span class="text-xs sm:text-sm font-medium text-slate-200">Full Social Management</span>
+                  </div>
+                  <i data-lucide="calendar" class="w-4 h-4 text-brand-accent"></i>
+                </label>
+
+                <label class="collab-option cursor-pointer p-3.5 rounded-lg border border-brand-border bg-brand-card hover:border-brand-accent transition-all flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" name="services" value="On-Camera Presenter" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()">
+                    <span class="text-xs sm:text-sm font-medium text-slate-200">On-Camera Presenter</span>
+                  </div>
+                  <i data-lucide="camera" class="w-4 h-4 text-brand-accent"></i>
+                </label>
+
+                <label class="collab-option cursor-pointer p-3.5 rounded-lg border border-brand-border bg-brand-card hover:border-brand-accent transition-all flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" name="services" value="Community Strategy" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()">
+                    <span class="text-xs sm:text-sm font-medium text-slate-200">Community Growth</span>
+                  </div>
+                  <i data-lucide="network" class="w-4 h-4 text-brand-accent"></i>
+                </label>
+
+                <label class="collab-option cursor-pointer p-3.5 rounded-lg border border-brand-border bg-brand-card hover:border-brand-accent transition-all flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <input type="checkbox" name="services" value="Executive Assistant Support" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()">
+                    <span class="text-xs sm:text-sm font-medium text-slate-200">Executive Assistance</span>
+                  </div>
+                  <i data-lucide="briefcase" class="w-4 h-4 text-brand-accent"></i>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Summary Output Card -->
+            <div class="p-5 rounded-xl bg-brand-black border border-brand-border flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Project Plan</span>
+                <h4 id="collabScopeTitle" class="text-base font-heading font-bold text-white mt-0.5">TikTok Package + Live Spaces Hosting</h4>
+                <p id="collabScopeDescription" class="text-xs text-brand-muted mt-0.5">
+                  Scripting, filming, editing, and live audio hosting with community moderation.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-2 shrink-0">
+                <button onclick="sendPrefilledProposal()" class="px-4 py-2.5 rounded-lg text-xs font-bold bg-brand-accent hover:bg-brand-accentHover text-brand-black transition-all flex items-center gap-2">
+                  <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                  <span>Send Proposal</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
-        <!-- Footer -->
-        <footer class="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-400">
-          <div class="inline-flex items-center gap-2">
-            <div class="h-6 w-6 rounded bg-yellow-400 text-neutral-900 grid place-items-center text-xs font-semibold tracking-tight" style="letter-spacing:-0.02em">DD</div>
-            <span>Divine • Deevine</span>
+      </div>
+    </section>
+
+    <!-- EPILOGUE: CONTACT & CLOSING (Incorporating page10_X4.jpg) -->
+    <section id="contact" class="py-16 sm:py-24 border-t border-brand-borderMuted bg-brand-dark/40">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        
+        <div class="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-10 shadow-2xl relative overflow-hidden reveal">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left Info (7 cols) -->
+            <div class="lg:col-span-7 space-y-5">
+              
+              <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-brand-card border border-brand-border text-brand-accent">
+                <i data-lucide="mail-check" class="w-3.5 h-3.5"></i> Say Hello
+              </div>
+
+              <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight leading-tight">
+                "Thank you so much! <span class="text-brand-accent">Email me."</span>
+              </h2>
+
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Whether you want to launch a viral short-form video series, host your next live space, or need a creator to represent your brand in Lagos — let's connect!
+              </p>
+
+              <!-- Contact Cards List -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                
+                <!-- Email -->
+                <button onclick="copyToClipboard('divineprosper8@gmail.com', 'Email copied', 'divineprosper8@gmail.com')" class="p-3.5 rounded-lg bg-brand-card border border-brand-border hover:border-brand-accent transition-all text-left group">
+                  <div class="flex items-center justify-between text-[11px] text-brand-muted mb-0.5">
+                    <span>Direct Email</span>
+                    <i data-lucide="copy" class="w-3 h-3 text-slate-500 group-hover:text-brand-accent"></i>
+                  </div>
+                  <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-brand-accent truncate">
+                    divineprosper8@gmail.com
+                  </div>
+                </button>
+
+                <!-- Phone / WhatsApp -->
+                <a href="https://wa.me/2349065117461?text=Hi%20Divine%2C%20I%27d%20like%20to%20collaborate%20with%20you%20on%20content%2Fhosting!" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-lg bg-brand-card border border-brand-border hover:border-emerald-500 transition-all text-left group">
+                  <div class="flex items-center justify-between text-[11px] text-brand-muted mb-0.5">
+                    <span>WhatsApp / Direct</span>
+                    <i data-lucide="phone-call" class="w-3 h-3 text-slate-500 group-hover:text-emerald-400"></i>
+                  </div>
+                  <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-emerald-400">
+                    +234 906 511 7461
+                  </div>
+                </a>
+
+                <!-- X (Twitter) -->
+                <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-lg bg-brand-card border border-brand-border hover:border-brand-accent transition-all text-left group">
+                  <div class="flex items-center justify-between text-[11px] text-brand-muted mb-0.5">
+                    <span>X (Twitter)</span>
+                    <i data-lucide="arrow-up-right" class="w-3 h-3 text-slate-500 group-hover:text-brand-accent"></i>
+                  </div>
+                  <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-brand-accent">
+                    @D_deevin
+                  </div>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/deevine_content" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-lg bg-brand-card border border-brand-border hover:border-rose-400 transition-all text-left group">
+                  <div class="flex items-center justify-between text-[11px] text-brand-muted mb-0.5">
+                    <span>Instagram</span>
+                    <i data-lucide="arrow-up-right" class="w-3 h-3 text-slate-500 group-hover:text-rose-400"></i>
+                  </div>
+                  <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-rose-400">
+                    @deevine_content
+                  </div>
+                </a>
+
+              </div>
+
+              <!-- Main Contact Actions -->
+              <div class="pt-2 flex flex-wrap items-center gap-2.5">
+                <a href="mailto:divineprosper8@gmail.com?subject=Collaboration%20Inquiry%20with%20Divine" class="px-5 py-2.5 rounded-lg text-xs font-bold bg-brand-accent hover:bg-brand-accentHover text-brand-black transition-all flex items-center gap-2">
+                  <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+                  Send Email
+                </a>
+                <a href="https://wa.me/2349065117461?text=Hi%20Divine%2C%20I%27d%20like%20to%20collaborate%20with%20you%20on%20content%2Fhosting!" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg text-xs font-medium bg-brand-card border border-brand-border hover:border-emerald-500 text-slate-300 hover:text-white transition-all flex items-center gap-2">
+                  <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+                  WhatsApp
+                </a>
+                <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg text-xs font-medium bg-brand-card border border-brand-border hover:border-brand-accent text-slate-300 hover:text-white transition-all flex items-center gap-2">
+                  <i data-lucide="twitter" class="w-3.5 h-3.5 text-brand-accent"></i>
+                  DM on X
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Right Closing Image (5 cols) page10_X4.jpg -->
+            <div class="lg:col-span-5">
+              <div class="relative rounded-xl overflow-hidden border border-brand-border bg-brand-black group shadow-xl cursor-pointer" onclick="openLightbox('assets/images/page10_X4.jpg', 'Divine Ejikeme — Thank You &amp; Contact')">
+                <img src="assets/images/page10_X4.jpg" alt="Divine Closing Portrait" class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-3 left-3 right-3 text-center">
+                  <p class="text-[11px] font-medium text-brand-accent uppercase tracking-widest">Amarachukwu Divine Ejikeme</p>
+                  <p class="text-xs font-heading font-bold text-white mt-0.5">Let's Create Together</p>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="inline-flex items-center gap-4">
-            <a href="https://www.instagram.com/deevine_content" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 hover:text-yellow-200">
-              <i data-lucide="instagram" class="w-4 h-4"></i> Instagram
+
+        </div>
+
+        <!-- Clean Footer -->
+        <footer class="mt-12 pt-6 border-t border-brand-borderMuted flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-muted">
+          <div class="flex items-center gap-2.5">
+            <div class="h-6 w-6 rounded bg-brand-card border border-brand-border text-brand-accent font-heading font-bold flex items-center justify-center text-xs">
+              DD
+            </div>
+            <div>
+              <span class="text-slate-300 font-medium">Divine Ejikeme</span>
+              <span class="text-brand-muted ml-1">· Creator &amp; Host</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+              X (@D_deevin)
             </a>
-            <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 hover:text-yellow-200">
-              <i data-lucide="twitter" class="w-4 h-4"></i> X
+            <a href="https://www.instagram.com/deevine_content" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+              Instagram
             </a>
-            <a href="mailto:divineprosper8@gmail.com" class="inline-flex items-center gap-1 hover:text-yellow-200">
-              <i data-lucide="mail" class="w-4 h-4"></i> Email
+            <a href="https://wa.me/2349065117461" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">
+              WhatsApp
             </a>
-            <span class="hidden sm:inline text-neutral-600">•</span>
-            <span class="text-neutral-500">© <span id="year"></span> All rights reserved.</span>
+            <a href="mailto:divineprosper8@gmail.com" class="hover:text-brand-accent transition-colors">
+              Email
+            </a>
+            <span class="text-brand-border">|</span>
+            <span>© <span id="year">2026</span> Divine Ejikeme</span>
           </div>
         </footer>
+
       </div>
     </section>
+  </main>
 
-    <script>
-      // Icons
-      window.addEventListener('DOMContentLoaded', () => {
-        if (window.lucide) {
-          lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
-        }
-        const btn = document.getElementById('mobileMenuBtn');
-        const menu = document.getElementById('mobileMenu');
-        if (btn && menu) {
-          btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            const icon = btn.querySelector('i[data-lucide]');
-            if (icon) {
-              const isOpen = !menu.classList.contains('hidden');
-              icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
-              lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
-            }
+  <!-- LIGHTBOX MODAL FOR ASSET INSPECTION -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm hidden opacity-0 transition-opacity duration-200 flex items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full bg-brand-surface border border-brand-border rounded-xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
+      
+      <div class="flex items-center justify-between px-4 py-3 border-b border-brand-border bg-brand-black">
+        <div class="flex items-center gap-2">
+          <div class="w-2 h-2 rounded-full bg-brand-accent"></div>
+          <span id="lightboxCaption" class="text-xs font-semibold text-white">Preview</span>
+        </div>
+        <button onclick="closeLightbox()" class="p-1.5 rounded text-brand-muted hover:text-white transition-colors">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-3 flex-1 flex items-center justify-center overflow-auto bg-brand-black">
+        <img id="lightboxImage" src="" alt="Enlarged asset preview" class="max-w-full max-h-[70vh] rounded object-contain">
+      </div>
+
+      <div class="px-4 py-2.5 border-t border-brand-border bg-brand-black flex items-center justify-between text-xs text-brand-muted">
+        <span>Portfolio Asset Slide</span>
+        <button onclick="closeLightbox()" class="px-2.5 py-1 rounded bg-brand-card text-slate-300 hover:text-white text-xs font-medium">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT CONTROLLERS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        lucide.createIcons({ attrs: { 'stroke-width': 1.6 } });
+      }
+
+      // Year update
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          mobileBtn.innerHTML = isOpen ? '<i data-lucide="x" class="w-5 h-5"></i>' : '<i data-lucide="menu" class="w-5 h-5"></i>';
+          lucide.createIcons({ attrs: { 'stroke-width': 1.6 } });
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileBtn.innerHTML = '<i data-lucide="menu" class="w-5 h-5"></i>';
+            lucide.createIcons({ attrs: { 'stroke-width': 1.6 } });
           });
-        }
-        const y = document.getElementById('year');
-        if (y) y.textContent = new Date().getFullYear();
+        });
+      }
+
+      // Smooth scroll navigation with offset
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href === '#' || !href) return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+            history.pushState(null, null, href);
+          }
+        });
       });
-    </script>
-  
-</body></html>
+
+      // Scroll Progress Indicator
+      window.addEventListener('scroll', () => {
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+        const bar = document.getElementById('scrollProgress');
+        if (bar) bar.style.width = progress + '%';
+      }, { passive: true });
+
+      // Intersection Observer for Section Highlighting
+      const sectionIds = ['about', 'chapter-origin', 'chapter-bridge', 'chapter-proof', 'chapter-method', 'interactive-hub', 'contact'];
+      const navButtons = document.querySelectorAll('.nav-pill');
+      const activeTitleEl = document.getElementById('activeChapterName');
+
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const currentId = entry.target.id;
+            navButtons.forEach(btn => {
+              if (btn.dataset.section === currentId) {
+                btn.classList.add('active');
+                if (activeTitleEl && btn.dataset.title) {
+                  activeTitleEl.textContent = btn.dataset.title;
+                }
+              } else {
+                btn.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, {
+        threshold: 0.25,
+        rootMargin: '-80px 0px -40% 0px'
+      });
+
+      sectionIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) sectionObserver.observe(el);
+      });
+
+      // Intersection Observer for Scroll Reveal Animations
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            
+            // Trigger counters
+            const counters = entry.target.querySelectorAll('.counter');
+            counters.forEach(counter => {
+              if (!counter.dataset.animated) {
+                animateCounter(counter);
+                counter.dataset.animated = 'true';
+              }
+            });
+
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // Trigger counters already in viewport
+      document.querySelectorAll('.counter').forEach(counter => {
+        const rect = counter.getBoundingClientRect();
+        if (rect.top < window.innerHeight && !counter.dataset.animated) {
+          animateCounter(counter);
+          counter.dataset.animated = 'true';
+        }
+      });
+    });
+
+    // Animated Counter Function
+    function animateCounter(el) {
+      const target = parseFloat(el.dataset.target) || 0;
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const duration = 1200; // ms
+      const startTime = performance.now();
+
+      function update(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(easeOut * target);
+
+        el.textContent = `${prefix}${current}${suffix}`;
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = `${prefix}${target}${suffix}`;
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    // Audio Space Simulator
+    let isPlaying = false;
+    let audioInterval = null;
+    let audioSeconds = 0;
+
+    function toggleSpaceAudio() {
+      const playIcon = document.getElementById('playIcon');
+      const waveBars = document.getElementById('waveBars');
+      const status = document.getElementById('spaceStatus');
+      const timer = document.getElementById('audioTimer');
+      const progress = document.getElementById('audioProgress');
+
+      isPlaying = !isPlaying;
+
+      if (isPlaying) {
+        waveBars.classList.add('playing');
+        status.textContent = "🎙️ Live: Divine hosting on stage...";
+        status.classList.add('text-brand-accent');
+        status.classList.remove('text-brand-muted');
+        playIcon.setAttribute('data-lucide', 'pause');
+
+        audioInterval = setInterval(() => {
+          audioSeconds++;
+          const mins = String(Math.floor(audioSeconds / 60)).padStart(2, '0');
+          const secs = String(audioSeconds % 60).padStart(2, '0');
+          timer.textContent = `${mins}:${secs}`;
+          const pct = Math.min((audioSeconds / 105) * 100, 100);
+          progress.style.width = pct + '%';
+
+          if (audioSeconds >= 105) {
+            toggleSpaceAudio();
+            audioSeconds = 0;
+          }
+        }, 1000);
+      } else {
+        waveBars.classList.remove('playing');
+        status.textContent = "Audio paused";
+        status.classList.remove('text-brand-accent');
+        status.classList.add('text-brand-muted');
+        playIcon.setAttribute('data-lucide', 'play');
+        clearInterval(audioInterval);
+      }
+      lucide.createIcons({ attrs: { 'stroke-width': 1.6 } });
+    }
+
+    // Content Filter Function (All, TikTok, Twitter)
+    function filterContent(type) {
+      const tabs = document.querySelectorAll('.content-tab-btn');
+      tabs.forEach(tab => {
+        tab.classList.remove('bg-brand-accent', 'text-brand-black', 'active', 'font-semibold');
+        tab.classList.add('text-slate-400', 'font-medium');
+      });
+
+      const activeBtn = document.getElementById(type === 'all' ? 'tabAll' : (type === 'tiktok' ? 'tabTiktok' : 'tabTwitter'));
+      if (activeBtn) {
+        activeBtn.classList.remove('text-slate-400', 'font-medium');
+        activeBtn.classList.add('bg-brand-accent', 'text-brand-black', 'active', 'font-semibold');
+      }
+
+      const cards = document.querySelectorAll('.content-card');
+      cards.forEach(card => {
+        if (type === 'all' || card.classList.contains(type)) {
+          card.style.display = 'flex';
+          card.classList.add('reveal', 'active');
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Lightbox Modal
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImage');
+      const cap = document.getElementById('lightboxCaption');
+
+      img.src = src;
+      cap.textContent = caption || 'Portfolio Preview';
+
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+      }, 10);
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.add('opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 200);
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    document.getElementById('lightboxModal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('lightboxModal')) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    function likeCaseStudy(btn, name) {
+      const countEl = btn.querySelector('.like-count');
+      if (countEl && !btn.dataset.liked) {
+        btn.dataset.liked = 'true';
+        countEl.textContent = parseInt(countEl.textContent, 10) + 1;
+        btn.classList.add('border-rose-500', 'text-rose-400');
+        showToast('Appreciated', `You cheered the ${name} campaign`);
+      }
+    }
+
+    // Toast Notification
+    function showToast(title, message) {
+      const toast = document.getElementById('toast');
+      const toastTitle = document.getElementById('toastTitle');
+      const toastMessage = document.getElementById('toastMessage');
+
+      toastTitle.textContent = title;
+      toastMessage.textContent = message;
+
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 2800);
+    }
+
+    // Copy to Clipboard
+    function copyToClipboard(text, title, msg) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(title, msg);
+      }).catch(() => {
+        showToast('Direct Action', text);
+      });
+    }
+
+    // Collab Matchmaker Logic
+    function updateCollabSummary() {
+      const checkboxes = document.querySelectorAll('input[name="services"]:checked');
+      const titleEl = document.getElementById('collabScopeTitle');
+      const descEl = document.getElementById('collabScopeDescription');
+
+      const selected = Array.from(checkboxes).map(cb => cb.value);
+
+      if (selected.length === 0) {
+        titleEl.textContent = "Custom Project Scope";
+        descEl.textContent = "Select what you need above to build your project plan.";
+        return;
+      }
+
+      titleEl.textContent = selected.slice(0, 2).join(" + ") + (selected.length > 2 ? ` (+${selected.length - 2} more)` : "");
+      descEl.textContent = `Includes end-to-end deliverables for: ${selected.join(', ')}. Fast execution & dedicated strategy.`;
+    }
+
+    function sendPrefilledProposal() {
+      const checkboxes = document.querySelectorAll('input[name="services"]:checked');
+      const selected = Array.from(checkboxes).map(cb => cb.value);
+      const servicesText = selected.length > 0 ? selected.join(', ') : "Content Creation & Hosting";
+      
+      const subject = encodeURIComponent(`Collaboration Inquiry: ${servicesText}`);
+      const body = encodeURIComponent(`Hi Divine,\n\nI checked out your portfolio and I'd love to discuss working together on:\n- ${selected.join('\n- ')}\n\nLooking forward to hearing from you!\n\nBest,`);
+      
+      window.location.href = `mailto:divineprosper8@gmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>

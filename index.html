@@ -2,13 +2,13 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8">
-  <title>Divine Ejikeme — Content Creator · On-Camera Host · SMM</title>
+  <title>Divine Ejikeme — Content Creator · On-Camera Host · Social Media Strategist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0D0D11">
-  <meta name="description" content="Divine Ejikeme (@D_deevin) — Lagos-based creator, video host, and social media strategist. Turning ideas into videos people actually watch.">
+  <meta name="theme-color" content="#0A0A0E">
+  <meta name="description" content="Hey, I'm Divine Ejikeme (@D_deevin) — Lagos-based creator, on-camera host, and social media strategist. I turn complex ideas into high-retention videos people love watching.">
 
   <!-- Open Graph / Meta -->
-  <meta property="og:title" content="Divine Ejikeme — Creator, Host &amp; Social Media Strategist">
+  <meta property="og:title" content="Divine Ejikeme — Content Creator &amp; On-Camera Host">
   <meta property="og:description" content="Cinematography eye, relatable Lagos energy, and real audience growth. 6M+ impressions, 150+ live audio spaces.">
   <meta property="og:image" content="https://47yv34ga2z.ufs.sh/f/2NpRwKYeHhfNP2MxBQhlCbgNZvrOQ5Y0fpnEK2i6LGVHzB1I">
   <meta property="og:type" content="website">
@@ -65,7 +65,7 @@
       background-color: #0A0A0E;
     }
 
-    /* Clean, minimal scroll progress bar */
+    /* Minimal scroll progress bar */
     #scrollProgress {
       position: fixed;
       top: 0;
@@ -108,7 +108,7 @@
       background: #E5A93C;
     }
 
-    /* Floating Chapter Navigator */
+    /* Floating Navigation Pills */
     .nav-pill {
       transition: all 0.2s ease;
     }
@@ -137,7 +137,7 @@
       100% { height: 22px; }
     }
 
-    /* Clean Card Hover */
+    /* Editorial Card Hover */
     .editorial-card {
       transition: border-color 0.25s ease, transform 0.25s ease;
     }
@@ -150,7 +150,7 @@
 
 <body class="min-h-screen bg-brand-black text-slate-200 font-sans antialiased selection:bg-brand-accent selection:text-brand-black relative">
 
-  <!-- Minimal Scroll Progress Indicator -->
+  <!-- Scroll Progress Indicator -->
   <div id="scrollProgress"></div>
 
   <!-- Toast Notification Container -->
@@ -164,53 +164,53 @@
     </div>
   </div>
 
-  <!-- FLOATING QUICK STORY NAVIGATOR -->
+  <!-- FLOATING QUICK PORTFOLIO NAVIGATOR (First Person Labels) -->
   <div id="quickNavigator" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 max-w-[96vw] transition-all duration-300">
-    <nav aria-label="Story chapter navigation" class="flex items-center gap-1 sm:gap-1.5 p-1.5 rounded-full bg-brand-dark/95 backdrop-blur-xl border border-brand-border shadow-2xl">
+    <nav aria-label="Portfolio navigation" class="flex items-center gap-1 sm:gap-1.5 p-1.5 rounded-full bg-brand-dark/95 backdrop-blur-xl border border-brand-border shadow-2xl">
       
-      <!-- Active chapter indicator -->
+      <!-- Dynamic Active section pill -->
       <div class="hidden md:flex items-center gap-2 pl-3 pr-2.5 py-1 text-xs font-semibold text-brand-accent border-r border-brand-border mr-1 select-none">
         <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
         <span id="activeChapterName" class="tracking-wide">Intro</span>
       </div>
 
-      <!-- Chapter 00 -->
-      <a href="#about" class="nav-pill active px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="about" data-title="Overview">
+      <!-- 00 Intro -->
+      <a href="#about" class="nav-pill active px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="about" data-title="Intro">
         <span class="text-[10px] opacity-75">00</span>
         <span class="hidden sm:inline">Intro</span>
       </a>
 
-      <!-- Chapter 01 -->
-      <a href="#chapter-origin" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="chapter-origin" data-title="Roots &amp; Background">
+      <!-- 01 About Me -->
+      <a href="#about-me" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="about-me" data-title="About Me">
         <span class="text-[10px] opacity-75">01</span>
-        <span class="hidden sm:inline">Roots</span>
+        <span class="hidden sm:inline">About</span>
       </a>
 
-      <!-- Chapter 02 -->
-      <a href="#chapter-bridge" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="chapter-bridge" data-title="The Lagos Vibe">
+      <!-- 02 My Approach -->
+      <a href="#my-approach" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="my-approach" data-title="My Approach">
         <span class="text-[10px] opacity-75">02</span>
-        <span class="hidden sm:inline">Vibe</span>
+        <span class="hidden sm:inline">Approach</span>
       </a>
 
-      <!-- Chapter 03 -->
-      <a href="#chapter-proof" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="chapter-proof" data-title="Results">
+      <!-- 03 Proof of Work -->
+      <a href="#proof-of-work" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="proof-of-work" data-title="Case Studies">
         <span class="text-[10px] opacity-75">03</span>
         <span class="hidden sm:inline">Results</span>
       </a>
 
-      <!-- Chapter 04 -->
-      <a href="#chapter-method" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="chapter-method" data-title="Skills &amp; Gear">
+      <!-- 04 Skills & Gear -->
+      <a href="#skills-and-gear" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="skills-and-gear" data-title="Skills &amp; Gear">
         <span class="text-[10px] opacity-75">04</span>
         <span class="hidden sm:inline">Skills</span>
       </a>
 
-      <!-- Chapter 05 -->
-      <a href="#interactive-hub" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="interactive-hub" data-title="Work Together">
+      <!-- 05 Work With Me -->
+      <a href="#interactive-hub" class="nav-pill px-3 py-1.5 rounded-full text-xs font-medium text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-section="interactive-hub" data-title="Work With Me">
         <span class="text-[10px] opacity-75">05</span>
         <span class="hidden sm:inline">Collab</span>
       </a>
 
-      <!-- Quick Talk CTA -->
+      <!-- Quick Contact CTA -->
       <a href="#contact" class="px-3 py-1.5 rounded-full text-xs font-bold bg-white text-brand-black hover:bg-slate-200 transition-all flex items-center gap-1.5">
         <i data-lucide="mail" class="w-3.5 h-3.5"></i>
         <span class="hidden sm:inline">Contact</span>
@@ -240,16 +240,16 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation -->
+        <!-- Desktop Navigation (First Person) -->
         <nav class="hidden lg:flex items-center gap-1 bg-brand-surface/70 border border-brand-border p-1 rounded-full text-xs">
           <a href="#about" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">Overview</a>
-          <a href="#chapter-origin" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">The Story</a>
-          <a href="#chapter-bridge" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">The Vibe</a>
-          <a href="#chapter-proof" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">Case Studies</a>
-          <a href="#chapter-method" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">Skills &amp; Gear</a>
+          <a href="#about-me" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">About Me</a>
+          <a href="#my-approach" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">My Approach</a>
+          <a href="#proof-of-work" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">Case Studies</a>
+          <a href="#skills-and-gear" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">Skills &amp; Gear</a>
           <a href="#feed" class="px-3.5 py-1.5 rounded-full font-medium text-slate-300 hover:text-white hover:bg-brand-card transition-all">Live Work</a>
           <a href="#interactive-hub" class="px-3.5 py-1.5 rounded-full font-semibold text-brand-accent bg-brand-accent/10 hover:bg-brand-accent/20 transition-all flex items-center gap-1.5">
-            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Collab
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Work With Me
           </a>
         </nav>
 
@@ -275,13 +275,13 @@
     <!-- Mobile Dropdown -->
     <div id="mobileMenu" class="lg:hidden hidden border-t border-brand-border bg-brand-dark px-4 py-4 space-y-1">
       <a href="#about" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">Overview</a>
-      <a href="#chapter-origin" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">Roots &amp; Background</a>
-      <a href="#chapter-bridge" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">The Lagos Vibe</a>
-      <a href="#chapter-proof" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">Case Studies</a>
-      <a href="#chapter-method" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">Skills &amp; Production Gear</a>
+      <a href="#about-me" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">About Me</a>
+      <a href="#my-approach" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">My Approach</a>
+      <a href="#proof-of-work" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">Case Studies</a>
+      <a href="#skills-and-gear" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">Skills &amp; Production Gear</a>
       <a href="#feed" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">Live Content Feed</a>
       <a href="#interactive-hub" class="block px-3 py-2 rounded-lg text-sm font-medium text-brand-accent hover:bg-brand-surface flex items-center gap-2">
-        <i data-lucide="sparkles" class="w-4 h-4"></i> Collab Builder
+        <i data-lucide="sparkles" class="w-4 h-4"></i> Work With Me
       </a>
       <a href="#contact" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-brand-surface">Contact Divine</a>
       <div class="pt-3 border-t border-brand-border flex gap-2">
@@ -326,7 +326,7 @@
   </div>
 
   <main>
-    <!-- PROLOGUE: THE HERO (PRESERVING EXACT HERO IMAGE) -->
+    <!-- HERO SECTION (First-Person POV) -->
     <section id="about" class="relative pt-12 pb-20 sm:pt-16 sm:pb-28">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
@@ -339,42 +339,42 @@
             <div class="flex flex-wrap items-center gap-2">
               <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium bg-brand-surface border border-brand-border text-slate-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
-                Creator · Host · SMM
+                Creator · Host · Social Media Strategist
               </span>
               <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium bg-brand-surface border border-brand-border text-brand-muted">
                 <i data-lucide="map-pin" class="w-3 h-3 text-slate-400"></i> Lagos, Nigeria
               </span>
             </div>
 
-            <!-- Main Heading (Clean solid typography, no cheesy gradients) -->
+            <!-- Main Heading (First Person) -->
             <div>
               <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-white leading-[1.1]">
-                Making content that people <span class="text-brand-accent">actually love</span> watching.
+                I make content that people <span class="text-brand-accent">actually love</span> watching.
               </h1>
               <p class="mt-3 text-lg font-heading font-medium text-slate-400">
-                Amarachukwu Divine Ejikeme <span class="text-brand-accent font-semibold">(@D_deevin)</span>
+                Hey, I'm Divine Ejikeme <span class="text-brand-accent font-semibold">(@D_deevin)</span>
               </p>
             </div>
 
-            <!-- Bio Narrative -->
+            <!-- Bio Narrative in First-Person -->
             <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
-              Most brand content is dry and forgets the human on the other side of the screen. <strong class="text-white font-semibold">Divine fixes that</strong>: combining clean cinematography, relatable Lagos humor, and on-camera energy to build real communities across TikTok, Reels, and X.
+              I help brands cut through online noise and build genuine audiences. With a background in cinematography, relatable Nigerian humor, and on-camera hosting, I translate complex products into high-retention videos across TikTok, Reels, and X.
             </p>
 
-            <!-- Story Quick Box -->
+            <!-- Personal Intro Box -->
             <div class="p-4 rounded-xl bg-brand-surface border border-brand-border flex items-start gap-3.5 max-w-2xl editorial-card">
               <div class="p-2 rounded-lg bg-brand-card border border-brand-border text-brand-accent shrink-0 mt-0.5">
-                <i data-lucide="compass" class="w-4 h-4"></i>
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
               </div>
               <div class="flex-1">
                 <div class="flex items-center justify-between">
-                  <h4 class="text-sm font-semibold text-white">The Creator Story</h4>
-                  <a href="#chapter-origin" class="text-xs font-medium text-brand-accent hover:underline flex items-center gap-1">
-                    Explore <i data-lucide="arrow-down" class="w-3 h-3"></i>
+                  <h4 class="text-sm font-semibold text-white">What I Bring to the Table</h4>
+                  <a href="#about-me" class="text-xs font-medium text-brand-accent hover:underline flex items-center gap-1">
+                    Learn More <i data-lucide="arrow-down" class="w-3 h-3"></i>
                   </a>
                 </div>
                 <p class="text-xs text-brand-muted mt-0.5">
-                  How a history degree, lens craft, and Lagos culture turned into 6M+ impressions and 150+ live audio spaces.
+                  Academic research discipline, crisp camera framing, and a proven track record of 6M+ impressions and 150+ live audio spaces.
                 </p>
               </div>
             </div>
@@ -409,15 +409,15 @@
               </div>
               <div class="p-3.5 rounded-xl bg-brand-surface border border-brand-border">
                 <div class="text-2xl sm:text-3xl font-heading font-bold text-white counter" data-target="150" data-suffix="+">0</div>
-                <div class="text-xs text-brand-muted mt-0.5">Live Spaces</div>
+                <div class="text-xs text-brand-muted mt-0.5">Live Spaces Hosted</div>
               </div>
               <div class="p-3.5 rounded-xl bg-brand-surface border border-brand-border">
                 <div class="text-2xl sm:text-3xl font-heading font-bold text-brand-accent counter" data-target="1000" data-prefix="0→" data-suffix="+">0</div>
-                <div class="text-xs text-brand-muted mt-0.5">TikTok Growth</div>
+                <div class="text-xs text-brand-muted mt-0.5">Organic TikTok Growth</div>
               </div>
               <div class="p-3.5 rounded-xl bg-brand-surface border border-brand-border">
                 <div class="text-2xl sm:text-3xl font-heading font-bold text-slate-300 counter" data-target="3" data-suffix="+ Yrs">0</div>
-                <div class="text-xs text-brand-muted mt-0.5">Experience</div>
+                <div class="text-xs text-brand-muted mt-0.5">Creator Experience</div>
               </div>
             </div>
 
@@ -454,11 +454,11 @@
                     <span class="text-xs font-semibold text-slate-300">Cinematographer</span>
                   </div>
 
-                  <!-- Live GM Solana Space Recording Player -->
+                  <!-- Real GM Solana Space Link Player -->
                   <div id="spacePlayer" class="absolute bottom-3 left-3 right-3 rounded-xl bg-brand-black/95 border border-brand-border p-3 shadow-xl">
                     <div class="flex items-center justify-between gap-3">
                       <div class="flex items-center gap-3">
-                        <a href="https://x.com/gmsolana_show/status/1998647533883850907?s=46" target="_blank" rel="noopener noreferrer" class="h-9 w-9 rounded-lg bg-brand-accent text-brand-black flex items-center justify-center font-bold hover:bg-brand-accentHover transition-all shrink-0 group/play" title="Listen to Live Episode on X">
+                        <a href="https://x.com/gmsolana_show/status/1998647533883850907?s=46" target="_blank" rel="noopener noreferrer" class="h-9 w-9 rounded-lg bg-brand-accent text-brand-black flex items-center justify-center font-bold hover:bg-brand-accentHover transition-all shrink-0 group/play" title="Listen to my Live Episode on X">
                           <i data-lucide="play" class="w-4 h-4 fill-current group-hover/play:scale-110 transition-transform"></i>
                         </a>
                         <div>
@@ -467,7 +467,7 @@
                             <span class="px-1.5 py-0.2 rounded text-[10px] font-semibold bg-brand-surface text-brand-accent border border-brand-border">150+ EPS</span>
                           </div>
                           <a href="https://x.com/gmsolana_show/status/1998647533883850907?s=46" target="_blank" rel="noopener noreferrer" class="text-[11px] text-brand-muted hover:text-brand-accent transition-colors flex items-center gap-1">
-                            <span>Listen to Live Episode on X</span>
+                            <span>Listen to my Live Episode on X</span>
                             <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
                           </a>
                         </div>
@@ -503,7 +503,7 @@
               <!-- Metadata pills under frame -->
               <div class="mt-3 grid grid-cols-3 gap-2 text-center text-xs">
                 <div class="p-2 rounded-lg bg-brand-surface border border-brand-border">
-                  <span class="text-[10px] text-brand-muted block">Format</span>
+                  <span class="text-[10px] text-brand-muted block">Focus</span>
                   <span class="font-semibold text-white">Short-Form Video</span>
                 </div>
                 <div class="p-2 rounded-lg bg-brand-surface border border-brand-border">
@@ -525,19 +525,19 @@
       </div>
     </section>
 
-    <!-- CHAPTER 1: ROOTS & LENS -->
-    <section id="chapter-origin" class="py-16 sm:py-24 border-t border-brand-borderMuted bg-brand-dark/40">
+    <!-- SECTION 01: ABOUT ME & BACKGROUND -->
+    <section id="about-me" class="py-16 sm:py-24 border-t border-brand-borderMuted bg-brand-dark/40">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         <div class="max-w-3xl mb-12 reveal">
           <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-brand-surface border border-brand-border text-brand-accent mb-3">
-            <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Chapter 01 · Roots &amp; The Camera Eye
+            <i data-lucide="user" class="w-3.5 h-3.5"></i> 01 · About Me &amp; Background
           </div>
           <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight">
             "Before the viral videos, there was History and a camera."
           </h2>
           <p class="mt-2.5 text-slate-300 text-base leading-relaxed">
-            Good storytelling isn't luck. It's understanding human psychology, narrative pacing, and how to hold attention from the first second.
+            I believe great storytelling isn't an accident. It comes from understanding why people care, combined with the visual discipline of framing and camera craft.
           </p>
         </div>
 
@@ -557,11 +557,11 @@
             </div>
             <div class="p-5 flex-1 flex flex-col justify-between">
               <div>
-                <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Education</span>
+                <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">My Foundation</span>
                 <h3 class="mt-1 text-lg font-heading font-bold text-white">University of Nigeria, Nsukka</h3>
                 <p class="text-xs text-brand-muted mt-0.5 font-medium">BA History &amp; International Studies</p>
                 <p class="mt-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  Studying history taught Divine how stories spread, why movements catch fire, and how to simplify complex subjects so everyday people relate to them.
+                  Studying History and International Studies taught me how narratives form, why cultural trends spread, and how to communicate complex concepts with clarity and precision.
                 </p>
               </div>
               <div class="mt-4 pt-4 border-t border-brand-border flex flex-wrap gap-1.5">
@@ -587,7 +587,7 @@
                 <h3 class="mt-1 text-lg font-heading font-bold text-white">Cinematography Background</h3>
                 <p class="text-xs text-brand-muted mt-0.5 font-medium">Lighting · Camera Eye · Sound · Pacing</p>
                 <p class="mt-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  Every video is framed with intent: clean lighting, crisp wireless audio, sharp color contrast, and micro-cuts that eliminate dead air.
+                  I frame every video with intent: intentional 3-point lighting, clean dual-channel wireless sound, sharp color contrast, and micro-cuts that eliminate dead air.
                 </p>
               </div>
               <div class="mt-4 pt-4 border-t border-brand-border flex items-center justify-between text-xs text-brand-muted">
@@ -608,11 +608,11 @@
             </div>
             <div class="p-5 flex-1 flex flex-col justify-between">
               <div>
-                <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Meet Divine</span>
+                <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">My Philosophy</span>
                 <h3 class="mt-1 text-lg font-heading font-bold text-white">"Hello, I'm Divine."</h3>
-                <p class="text-xs text-brand-muted mt-0.5 font-medium">Authenticity Over Empty Views</p>
+                <p class="text-xs text-brand-muted mt-0.5 font-medium">Authenticity Over Vanity Metrics</p>
                 <p class="mt-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  "I love helping brands turn what they do into fun, engaging stories that real people care about. No empty vanity metrics — just real community."
+                  "I love helping brands turn what they do into fun, engaging content that real people care about. No empty vanity views — just real audience connection and loyal community."
                 </p>
               </div>
               <div class="mt-4 pt-4 border-t border-brand-border flex items-center justify-between text-xs text-brand-muted">
@@ -627,8 +627,8 @@
       </div>
     </section>
 
-    <!-- CHAPTER 2: THE LAGOS VIBE -->
-    <section id="chapter-bridge" class="py-16 sm:py-24 border-t border-brand-borderMuted">
+    <!-- SECTION 02: MY APPROACH -->
+    <section id="my-approach" class="py-16 sm:py-24 border-t border-brand-borderMuted">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -636,15 +636,15 @@
           <!-- Narrative Story Flow (7 cols) -->
           <div class="lg:col-span-7 space-y-5 reveal">
             <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-brand-surface border border-brand-border text-brand-accent">
-              <i data-lucide="zap" class="w-3.5 h-3.5"></i> Chapter 02 · The Lagos Vibe
+              <i data-lucide="zap" class="w-3.5 h-3.5"></i> 02 · My Approach
             </div>
 
             <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight leading-tight">
-              Taking complex ideas and making them <span class="text-brand-accent">relatable &amp; fun.</span>
+              I take complex ideas and make them <span class="text-brand-accent">relatable &amp; fun.</span>
             </h2>
 
             <p class="text-slate-300 text-base leading-relaxed">
-              When Web3 and new tech started taking off in Nigeria, most projects sounded like instruction manuals. Nobody was explaining what this stuff actually meant for everyday life. Divine stepped in with short skits, relatable humor, and clear talk.
+              When Web3 and fintech began exploding across Africa, most projects spoke in heavy technical jargon. I spotted the opportunity: translate complex products into short skits, relatable Nigerian humor, and everyday analogies that connect instantly.
             </p>
 
             <!-- Clean side by side comparison -->
@@ -657,7 +657,7 @@
                 <div>
                   <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">The Typical Tech Pitch</h4>
                   <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                    Dry charts, complicated jargon, and boring monologues that lose the viewer in 3 seconds.
+                    Dry charts, complicated terminology, and monotone delivery that loses viewers in seconds.
                   </p>
                 </div>
               </div>
@@ -667,9 +667,9 @@
                   <i data-lucide="sparkles" class="w-4 h-4"></i>
                 </div>
                 <div>
-                  <h4 class="text-xs font-bold uppercase tracking-wider text-brand-accent">Divine's Style</h4>
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-brand-accent">How I Frame It</h4>
                   <p class="text-xs text-slate-200 mt-1 leading-relaxed">
-                    Lagos humor, quick skits, and everyday analogies that make you laugh and understand instantly.
+                    Street humor, relatable skits, and everyday lifestyle hooks that make people laugh and understand immediately.
                   </p>
                 </div>
               </div>
@@ -677,7 +677,7 @@
             </div>
 
             <blockquote class="p-3.5 rounded-lg border-l-2 border-brand-accent bg-brand-surface text-xs text-slate-300 italic">
-              "If people can't smile and get it in 30 seconds, they'll just scroll. Content has to feel alive."
+              "If people can't smile and get the point in 30 seconds, they will just scroll. My job is to make them stop, watch, and share."
             </blockquote>
 
           </div>
@@ -689,7 +689,7 @@
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div class="absolute bottom-3.5 left-3.5 right-3.5 flex items-center justify-between">
                 <div>
-                  <span class="text-[10px] font-bold text-brand-accent uppercase tracking-wide">Experience Slide</span>
+                  <span class="text-[10px] font-bold text-brand-accent uppercase tracking-wide">My Experience</span>
                   <p class="text-sm font-heading font-bold text-white">Creator &amp; Host Track Record</p>
                 </div>
                 <span class="px-2.5 py-1 rounded bg-white text-brand-black text-xs font-bold flex items-center gap-1">
@@ -704,7 +704,7 @@
                   6M
                 </div>
                 <div>
-                  <h5 class="text-xs font-semibold text-white">Organic Reach Record</h5>
+                  <h5 class="text-xs font-semibold text-white">My Organic Reach Record</h5>
                   <p class="text-[11px] text-brand-muted">Across ecosystem tweets, skits &amp; Spaces</p>
                 </div>
               </div>
@@ -717,19 +717,19 @@
       </div>
     </section>
 
-    <!-- CHAPTER 3: RESULTS & CASE STUDIES -->
-    <section id="chapter-proof" class="py-16 sm:py-24 border-t border-brand-borderMuted bg-brand-dark/40">
+    <!-- SECTION 03: PROOF OF WORK & CASE STUDIES -->
+    <section id="proof-of-work" class="py-16 sm:py-24 border-t border-brand-borderMuted bg-brand-dark/40">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         <div class="max-w-3xl mb-12 reveal">
           <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-brand-surface border border-brand-border text-brand-accent mb-3">
-            <i data-lucide="award" class="w-3.5 h-3.5"></i> Chapter 03 · Proof of Work
+            <i data-lucide="award" class="w-3.5 h-3.5"></i> 03 · Proof of Work
           </div>
           <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight">
             "Real growth you can actually verify."
           </h2>
           <p class="mt-2 text-slate-300 text-base">
-            A look at real accounts grown, communities built, and campaigns hosted.
+            Here is a breakdown of real accounts I have managed, communities I have built, and campaigns I have hosted.
           </p>
         </div>
 
@@ -744,28 +744,28 @@
                 <img src="assets/images/page8_X4.png" alt="SuperteamNG Logo" class="h-10 w-10 object-contain rounded-lg bg-brand-card p-1 border border-brand-border">
                 <div>
                   <span class="text-[11px] font-bold uppercase tracking-wider text-brand-accent">Case Study 01 · TikTok Management</span>
-                  <h3 class="text-xl sm:text-2xl font-heading font-bold text-white">SuperteamNG TikTok Growth</h3>
+                  <h3 class="text-xl sm:text-2xl font-heading font-bold text-white">SuperteamNG TikTok Growth Engine</h3>
                 </div>
               </div>
 
               <p class="text-slate-300 text-sm leading-relaxed">
-                <strong class="text-white">The Challenge:</strong> SuperteamNG had a quiet TikTok account with only ~20 followers and little engagement.
+                <strong class="text-white">The Challenge:</strong> SuperteamNG had a quiet TikTok account stuck at ~20 followers with virtually no engagement.
               </p>
               <p class="text-slate-300 text-sm leading-relaxed">
-                <strong class="text-white">What Divine Did:</strong> Took charge of video ideas, on-camera delivery, and relatable storytelling to explain Solana to the African creator community.
+                <strong class="text-white">My Strategy:</strong> I took over full creative direction. I wrote hook scripts, filmed on-camera explainers, and deployed fast-cut humor to explain Solana to the African creator and developer community.
               </p>
 
               <!-- Stat callouts -->
               <div class="grid grid-cols-2 gap-3 pt-1">
                 <div class="p-3 rounded-lg bg-brand-card border border-brand-border">
-                  <div class="text-[11px] text-brand-muted">Started At</div>
+                  <div class="text-[11px] text-brand-muted">Starting Point</div>
                   <div class="text-xl font-heading font-bold text-slate-300">~20 Followers</div>
-                  <div class="text-[10px] text-brand-muted mt-0.5">Dormant account</div>
+                  <div class="text-[10px] text-brand-muted mt-0.5">Dormant engagement</div>
                 </div>
                 <div class="p-3 rounded-lg bg-brand-card border border-brand-accent/40">
                   <div class="text-[11px] text-brand-accent font-semibold">Organic Result</div>
                   <div class="text-xl font-heading font-bold text-brand-accent">1,000+ Followers</div>
-                  <div class="text-[10px] text-emerald-400 mt-0.5">0→300 in 30 Days · $0 Ads</div>
+                  <div class="text-[10px] text-emerald-400 mt-0.5">0→300 in 30 Days · $0 Paid Ads</div>
                 </div>
               </div>
 
@@ -850,7 +850,7 @@
               </div>
 
               <p class="text-slate-300 text-sm leading-relaxed">
-                <strong class="text-white">The Goal:</strong> Help Bread Africa build an active following on X and attract crypto builders across Africa.
+                <strong class="text-white">The Goal:</strong> Help the Bread Africa team expand their following on X and attract active Solana users and builders across the continent.
               </p>
 
               <!-- Highlights -->
@@ -858,7 +858,7 @@
                 <div class="p-3 rounded-lg bg-brand-card border border-brand-border">
                   <div class="text-brand-accent text-xl font-heading font-bold">+50%</div>
                   <div class="text-xs text-slate-200 font-medium mt-0.5">Audience Growth</div>
-                  <p class="text-[11px] text-brand-muted mt-0.5">Consistent community expansion.</p>
+                  <p class="text-[11px] text-brand-muted mt-0.5">High-intent Web3 users.</p>
                 </div>
                 <div class="p-3 rounded-lg bg-brand-card border border-brand-border">
                   <div class="text-white text-xl font-heading font-bold">Weekly Spaces</div>
@@ -890,17 +890,17 @@
               </div>
               <h3 class="text-xl sm:text-2xl font-heading font-bold text-white">GM Solana Morning Spaces &amp; Solflare Campaign</h3>
               <p class="text-slate-300 text-sm leading-relaxed">
-                Co-hosting <strong class="text-brand-accent font-semibold">150+ live audio episodes</strong> made Divine a familiar voice in the ecosystem. Featured partner for the Solflare x Airbills campaign.
+                Co-hosting <strong class="text-brand-accent font-semibold">150+ live audio episodes</strong> made me a trusted voice in the African crypto ecosystem. I also served as a featured campaign partner for the Solflare x Airbills utility rollouts.
               </p>
               <div class="flex flex-wrap items-center gap-3 text-xs text-brand-muted pt-1">
                 <span class="flex items-center gap-1 text-slate-200"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> 150+ Live Rooms</span>
-                <span class="flex items-center gap-1 text-slate-200"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Loyal Listeners</span>
+                <span class="flex items-center gap-1 text-slate-200"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Loyal Morning Audience</span>
                 <span class="flex items-center gap-1 text-slate-200"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Founder Interviews</span>
               </div>
               <div class="pt-2">
                 <a href="https://x.com/gmsolana_show/status/1998647533883850907?s=46" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-brand-card border border-brand-border hover:border-brand-accent text-xs font-semibold text-white transition-all">
                   <i data-lucide="play" class="w-3.5 h-3.5 text-brand-accent fill-current"></i>
-                  <span>Listen to Space Recording on X</span>
+                  <span>Listen to My Space Recording on X</span>
                   <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-500"></i>
                 </a>
               </div>
@@ -922,19 +922,19 @@
       </div>
     </section>
 
-    <!-- CHAPTER 4: CREATIVE SKILLS & GEAR -->
-    <section id="chapter-method" class="py-16 sm:py-24 border-t border-brand-borderMuted">
+    <!-- SECTION 04: MY PROCESS, SKILLS & PRODUCTION GEAR -->
+    <section id="skills-and-gear" class="py-16 sm:py-24 border-t border-brand-borderMuted">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-12 reveal">
           <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-brand-surface border border-brand-border text-brand-accent mb-3">
-            <i data-lucide="layers" class="w-3.5 h-3.5"></i> Chapter 04 · The Creative Pipeline
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i> 04 · My Creative Pipeline
           </div>
           <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight">
-            How Divine Brings Videos to Life
+            How I Bring Videos to Life
           </h2>
           <p class="mt-2 text-brand-muted text-sm sm:text-base">
-            From the initial hook idea to the final cut and community chat.
+            From the initial hook idea to the final edit and community engagement.
           </p>
         </div>
 
@@ -951,7 +951,7 @@
               </div>
               <h3 class="text-base font-heading font-bold text-white">Find the Hook</h3>
               <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
-                Spotting the funny, relatable angle that makes people stop scrolling and pay attention.
+                I identify the relatable angle or pain point that makes everyday viewers pause their scroll.
               </p>
             </div>
             <div class="mt-4 pt-3 border-t border-brand-border text-xs text-brand-muted">
@@ -969,11 +969,11 @@
               </div>
               <h3 class="text-base font-heading font-bold text-white">Shoot with Energy</h3>
               <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
-                Crisp camera work, soft lighting, clear wireless audio, and confident on-camera delivery.
+                I capture high-definition footage with clean framing, soft lighting, and crisp wireless audio.
               </p>
             </div>
             <div class="mt-4 pt-3 border-t border-brand-border text-xs text-brand-muted">
-              <span class="text-brand-accent font-medium">Deliverable:</span> Pro Production
+              <span class="text-brand-accent font-medium">Deliverable:</span> Raw Production
             </div>
           </div>
 
@@ -987,7 +987,7 @@
               </div>
               <h3 class="text-base font-heading font-bold text-white">Fast-Paced Editing</h3>
               <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
-                Snappy cuts, subtitles, sound effects, and smooth pacing built specifically for TikTok &amp; Reels.
+                I craft dynamic jump cuts, bold subtitles, and sound effects built specifically for high mobile retention.
               </p>
             </div>
             <div class="mt-4 pt-3 border-t border-brand-border text-xs text-brand-muted">
@@ -1005,11 +1005,11 @@
               </div>
               <h3 class="text-base font-heading font-bold text-white">Engage Audience</h3>
               <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
-                Replying in comments, hosting live voice Spaces, and turning viewers into an active community.
+                I reply actively in the comments and host live voice Spaces to turn casual viewers into loyal brand advocates.
               </p>
             </div>
             <div class="mt-4 pt-3 border-t border-brand-border text-xs text-brand-muted">
-              <span class="text-brand-accent font-medium">Deliverable:</span> Community Fans
+              <span class="text-brand-accent font-medium">Deliverable:</span> Active Community
             </div>
           </div>
 
@@ -1022,25 +1022,25 @@
               <i data-lucide="sliders" class="w-4 h-4"></i>
             </div>
             <div>
-              <h3 class="text-base font-heading font-bold text-white">Production Gear &amp; Software</h3>
-              <p class="text-xs text-brand-muted">The toolkit behind the quality</p>
+              <h3 class="text-base font-heading font-bold text-white">My Production Gear &amp; Software</h3>
+              <p class="text-xs text-brand-muted">The hardware and software powering my output</p>
             </div>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div class="p-3.5 rounded-lg bg-brand-card border border-brand-border">
               <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wide">Camera &amp; Sound</span>
               <h4 class="text-xs font-semibold text-white mt-1">Cinematography Setup</h4>
-              <p class="text-xs text-brand-muted mt-1">Mirrorless camera, 35mm prime lens, wireless dual lavaliers, softbox lighting.</p>
+              <p class="text-xs text-brand-muted mt-1">Mirrorless camera body, 35mm f/1.4 prime lens, dual wireless lavaliers, softbox lighting.</p>
             </div>
             <div class="p-3.5 rounded-lg bg-brand-card border border-brand-border">
               <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wide">Editing</span>
               <h4 class="text-xs font-semibold text-white mt-1">Post-Production</h4>
-              <p class="text-xs text-brand-muted mt-1">CapCut Pro &amp; Premiere for pacing, Adobe Suite, Canva Pro for bespoke thumbnails.</p>
+              <p class="text-xs text-brand-muted mt-1">CapCut Pro &amp; Premiere for micro-pacing, Adobe Creative Suite, Canva Pro for thumbnails.</p>
             </div>
             <div class="p-3.5 rounded-lg bg-brand-card border border-brand-border">
               <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wide">Management</span>
               <h4 class="text-xs font-semibold text-white mt-1">Social Operations</h4>
-              <p class="text-xs text-brand-muted mt-1">X Spaces Audio Suite, Notion content calendars, and community analytics.</p>
+              <p class="text-xs text-brand-muted mt-1">X Spaces Audio Suite, Notion editorial calendars, Telegram / Discord community bots.</p>
             </div>
           </div>
         </div>
@@ -1050,7 +1050,7 @@
           <div class="flex items-center gap-3.5">
             <img src="assets/images/page5_X7.jpg" alt="Skills Graphic" class="w-16 h-12 rounded object-cover">
             <div>
-              <h4 class="text-sm font-heading font-bold text-white">View Full Skills Matrix Slide from Resume</h4>
+              <h4 class="text-sm font-heading font-bold text-white">View Full Skills Matrix Slide from My Resume</h4>
               <p class="text-xs text-brand-muted">Content Creation · Videography · Community Building · Communication</p>
             </div>
           </div>
@@ -1070,13 +1070,13 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 reveal">
           <div>
             <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-brand-surface border border-brand-border text-brand-accent mb-2">
-              <i data-lucide="play-circle" class="w-3.5 h-3.5"></i> Portfolio Feed
+              <i data-lucide="play-circle" class="w-3.5 h-3.5"></i> My Live Content
             </div>
             <h2 class="text-3xl font-heading font-bold text-white tracking-tight">
               Featured Work on TikTok &amp; X
             </h2>
             <p class="text-brand-muted text-sm mt-1">
-              Tap to view live short-form videos and high-impact discussions.
+              Tap to view some of my recent short-form videos and high-impact discussions.
             </p>
           </div>
 
@@ -1103,7 +1103,7 @@
                 Lagos Culture Meets Web3
               </h4>
               <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
-                Short-form video capturing everyday hustle in Lagos and linking it with crypto finance.
+                Short-form explainer capturing the everyday hustle in Lagos and linking it with modern digital finance.
               </p>
             </div>
             <div class="mt-5 pt-3.5 border-t border-brand-border flex items-center justify-between">
@@ -1128,7 +1128,7 @@
                 Crypto Without The Jargon
               </h4>
               <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
-                Breaking down crypto basics with simple, relatable street analogies.
+                Breaking down Solana wallet safety and ecosystem benefits using relatable analogies.
               </p>
             </div>
             <div class="mt-5 pt-3.5 border-t border-brand-border flex items-center justify-between">
@@ -1153,7 +1153,7 @@
                 On-Camera Humor &amp; Skits
               </h4>
               <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
-                Fast-cut creative sketch that drove record comments and shares.
+                Fast-paced sketch comedy driving record comment engagement and organic community shares.
               </p>
             </div>
             <div class="mt-5 pt-3.5 border-t border-brand-border flex items-center justify-between">
@@ -1197,7 +1197,7 @@
                 <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-card text-sky-400 border border-brand-border">
                   <i data-lucide="twitter" class="w-3 h-3"></i> X Viral Thread
                 </span>
-                <span class="text-xs text-brand-muted">@D_deevine</span>
+                <span class="text-xs text-brand-muted">@D_deevin</span>
               </div>
               <h4 class="text-base font-heading font-bold text-white">
                 African Creator Insights
@@ -1222,13 +1222,13 @@
                 <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-card text-sky-400 border border-brand-border">
                   <i data-lucide="twitter" class="w-3 h-3"></i> Community Hangout
                 </span>
-                <span class="text-xs text-brand-muted">@D_deevine</span>
+                <span class="text-xs text-brand-muted">@D_deevin</span>
               </div>
               <h4 class="text-base font-heading font-bold text-white">
                 Interactive Community Spaces
               </h4>
               <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
-                Regular voice discussions connecting creatives, developers, and tech enthusiasts.
+                Regular voice discussions connecting creatives, developers, and web3 enthusiasts.
               </p>
             </div>
             <div class="mt-5 pt-3.5 border-t border-brand-border flex items-center justify-between">
@@ -1245,7 +1245,7 @@
       </div>
     </section>
 
-    <!-- CHAPTER 5: COLLAB BUILDER -->
+    <!-- SECTION 05: WORK WITH ME (Interactive Collab Scope Builder) -->
     <section id="interactive-hub" class="py-16 sm:py-24 border-t border-brand-borderMuted">
       <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         
@@ -1253,13 +1253,13 @@
           
           <div class="text-center max-w-2xl mx-auto mb-8">
             <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-brand-card border border-brand-border text-brand-accent mb-2">
-              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Chapter 05 · Work Together
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> 05 · Work With Me
             </div>
             <h2 class="text-3xl font-heading font-bold text-white tracking-tight">
-              Let's Create Something Great
+              Let's Create Something Great Together
             </h2>
             <p class="mt-1 text-xs sm:text-sm text-brand-muted">
-              Select what your brand or project needs to build a direct proposal.
+              Select the services you need for your brand or project to generate an estimated scope.
             </p>
           </div>
 
@@ -1274,7 +1274,7 @@
                 
                 <label class="collab-option cursor-pointer p-3.5 rounded-lg border border-brand-border bg-brand-card hover:border-brand-accent transition-all flex items-center justify-between">
                   <div class="flex items-center gap-2.5">
-                    <input type="checkbox" name="services" value="TikTok Video Package" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()" checked>
+                    <input type="checkbox" name="services" value="TikTok & Reels Video Package" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()" checked>
                     <span class="text-xs sm:text-sm font-medium text-slate-200">TikTok &amp; Reels Videos</span>
                   </div>
                   <i data-lucide="video" class="w-4 h-4 text-brand-accent"></i>
@@ -1282,7 +1282,7 @@
 
                 <label class="collab-option cursor-pointer p-3.5 rounded-lg border border-brand-border bg-brand-card hover:border-brand-accent transition-all flex items-center justify-between">
                   <div class="flex items-center gap-2.5">
-                    <input type="checkbox" name="services" value="Live Audio / Spaces Hosting" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()" checked>
+                    <input type="checkbox" name="services" value="X Space & Live Audio Hosting" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()" checked>
                     <span class="text-xs sm:text-sm font-medium text-slate-200">X Spaces Host</span>
                   </div>
                   <i data-lucide="mic-2" class="w-4 h-4 text-brand-accent"></i>
@@ -1290,7 +1290,7 @@
 
                 <label class="collab-option cursor-pointer p-3.5 rounded-lg border border-brand-border bg-brand-card hover:border-brand-accent transition-all flex items-center justify-between">
                   <div class="flex items-center gap-2.5">
-                    <input type="checkbox" name="services" value="Social Media Management" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()">
+                    <input type="checkbox" name="services" value="Full Social Media Management" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()">
                     <span class="text-xs sm:text-sm font-medium text-slate-200">Full Social Management</span>
                   </div>
                   <i data-lucide="calendar" class="w-4 h-4 text-brand-accent"></i>
@@ -1298,7 +1298,7 @@
 
                 <label class="collab-option cursor-pointer p-3.5 rounded-lg border border-brand-border bg-brand-card hover:border-brand-accent transition-all flex items-center justify-between">
                   <div class="flex items-center gap-2.5">
-                    <input type="checkbox" name="services" value="On-Camera Presenter" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()">
+                    <input type="checkbox" name="services" value="On-Camera Presenter / Host" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()">
                     <span class="text-xs sm:text-sm font-medium text-slate-200">On-Camera Presenter</span>
                   </div>
                   <i data-lucide="camera" class="w-4 h-4 text-brand-accent"></i>
@@ -1306,7 +1306,7 @@
 
                 <label class="collab-option cursor-pointer p-3.5 rounded-lg border border-brand-border bg-brand-card hover:border-brand-accent transition-all flex items-center justify-between">
                   <div class="flex items-center gap-2.5">
-                    <input type="checkbox" name="services" value="Community Strategy" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()">
+                    <input type="checkbox" name="services" value="Web3 Community Strategy" class="rounded text-brand-accent focus:ring-brand-accent bg-brand-surface border-brand-border" onchange="updateCollabSummary()">
                     <span class="text-xs sm:text-sm font-medium text-slate-200">Community Growth</span>
                   </div>
                   <i data-lucide="network" class="w-4 h-4 text-brand-accent"></i>
@@ -1326,17 +1326,17 @@
             <!-- Summary Output Card -->
             <div class="p-5 rounded-xl bg-brand-black border border-brand-border flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
-                <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Project Plan</span>
+                <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Estimated Project Scope</span>
                 <h4 id="collabScopeTitle" class="text-base font-heading font-bold text-white mt-0.5">TikTok Package + Live Spaces Hosting</h4>
                 <p id="collabScopeDescription" class="text-xs text-brand-muted mt-0.5">
-                  Scripting, filming, editing, and live audio hosting with community moderation.
+                  Scripting, filming, editing, and live audio hosting with dedicated community engagement.
                 </p>
               </div>
 
               <div class="flex items-center gap-2 shrink-0">
                 <button onclick="sendPrefilledProposal()" class="px-4 py-2.5 rounded-lg text-xs font-bold bg-brand-accent hover:bg-brand-accentHover text-brand-black transition-all flex items-center gap-2">
                   <i data-lucide="send" class="w-3.5 h-3.5"></i>
-                  <span>Send Proposal</span>
+                  <span>Launch Proposal</span>
                 </button>
               </div>
             </div>
@@ -1348,7 +1348,7 @@
       </div>
     </section>
 
-    <!-- EPILOGUE: CONTACT & CLOSING (Incorporating page10_X4.jpg) -->
+    <!-- EPILOGUE: CONTACT & CLOSING (First-Person POV) -->
     <section id="contact" class="py-16 sm:py-24 border-t border-brand-borderMuted bg-brand-dark/40">
       <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         
@@ -1368,7 +1368,7 @@
               </h2>
 
               <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Whether you want to launch a viral short-form video series, host your next live space, or need a creator to represent your brand in Lagos — let's connect!
+                Whether you want to launch a high-impact video campaign, need an experienced on-camera host in Lagos, or want to grow your brand's presence across TikTok and X — let's connect!
               </p>
 
               <!-- Contact Cards List -->
@@ -1424,7 +1424,7 @@
               <div class="pt-2 flex flex-wrap items-center gap-2.5">
                 <a href="mailto:divineprosper8@gmail.com?subject=Collaboration%20Inquiry%20with%20Divine" class="px-5 py-2.5 rounded-lg text-xs font-bold bg-brand-accent hover:bg-brand-accentHover text-brand-black transition-all flex items-center gap-2">
                   <i data-lucide="mail" class="w-3.5 h-3.5"></i>
-                  Send Email
+                  Send Direct Email
                 </a>
                 <a href="https://wa.me/2349065117461?text=Hi%20Divine%2C%20I%27d%20like%20to%20collaborate%20with%20you%20on%20content%2Fhosting!" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg text-xs font-medium bg-brand-card border border-brand-border hover:border-emerald-500 text-slate-300 hover:text-white transition-all flex items-center gap-2">
                   <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
@@ -1573,7 +1573,7 @@
       }, { passive: true });
 
       // Intersection Observer for Section Highlighting
-      const sectionIds = ['about', 'chapter-origin', 'chapter-bridge', 'chapter-proof', 'chapter-method', 'interactive-hub', 'contact'];
+      const sectionIds = ['about', 'about-me', 'my-approach', 'proof-of-work', 'skills-and-gear', 'interactive-hub', 'contact'];
       const navButtons = document.querySelectorAll('.nav-pill');
       const activeTitleEl = document.getElementById('activeChapterName');
 
@@ -1663,8 +1663,6 @@
 
       requestAnimationFrame(update);
     }
-
-
 
     // Content Filter Function (All, TikTok, Twitter)
     function filterContent(type) {

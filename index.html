@@ -454,40 +454,45 @@
                     <span class="text-xs font-semibold text-slate-300">Cinematographer</span>
                   </div>
 
-                  <!-- Interactive GM Solana Space Player Simulation -->
+                  <!-- Live GM Solana Space Recording Player -->
                   <div id="spacePlayer" class="absolute bottom-3 left-3 right-3 rounded-xl bg-brand-black/95 border border-brand-border p-3 shadow-xl">
                     <div class="flex items-center justify-between gap-3">
                       <div class="flex items-center gap-3">
-                        <button id="playSpaceBtn" onclick="toggleSpaceAudio()" class="h-9 w-9 rounded-lg bg-brand-accent text-brand-black flex items-center justify-center font-bold hover:bg-brand-accentHover transition-all shrink-0">
-                          <i id="playIcon" data-lucide="play" class="w-4 h-4 fill-current"></i>
-                        </button>
+                        <a href="https://x.com/gmsolana_show/status/1998647533883850907?s=46" target="_blank" rel="noopener noreferrer" class="h-9 w-9 rounded-lg bg-brand-accent text-brand-black flex items-center justify-center font-bold hover:bg-brand-accentHover transition-all shrink-0 group/play" title="Listen to Live Episode on X">
+                          <i data-lucide="play" class="w-4 h-4 fill-current group-hover/play:scale-110 transition-transform"></i>
+                        </a>
                         <div>
                           <div class="flex items-center gap-2">
-                            <span class="text-xs font-bold text-white uppercase tracking-wider">GM Solana Live Host</span>
-                            <span id="liveTag" class="px-1.5 py-0.2 rounded text-[10px] font-semibold bg-brand-surface text-brand-accent border border-brand-border">150+ EPS</span>
+                            <span class="text-xs font-bold text-white uppercase tracking-wider">GM Solana Live Space</span>
+                            <span class="px-1.5 py-0.2 rounded text-[10px] font-semibold bg-brand-surface text-brand-accent border border-brand-border">150+ EPS</span>
                           </div>
-                          <p id="spaceStatus" class="text-[11px] text-brand-muted">Tap to listen to host simulation</p>
+                          <a href="https://x.com/gmsolana_show/status/1998647533883850907?s=46" target="_blank" rel="noopener noreferrer" class="text-[11px] text-brand-muted hover:text-brand-accent transition-colors flex items-center gap-1">
+                            <span>Listen to Live Episode on X</span>
+                            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                          </a>
                         </div>
                       </div>
                       
-                      <!-- Animated Audio Waveform -->
-                      <div id="waveBars" class="flex items-end gap-1 h-5 px-2">
+                      <!-- Audio Waveform Link -->
+                      <a href="https://x.com/gmsolana_show/status/1998647533883850907?s=46" target="_blank" rel="noopener noreferrer" class="playing flex items-end gap-1 h-5 px-2 hover:opacity-80 transition-opacity" title="Open Recording on X">
                         <span class="wave-bar h-2"></span>
                         <span class="wave-bar h-3"></span>
                         <span class="wave-bar h-2"></span>
                         <span class="wave-bar h-4"></span>
                         <span class="wave-bar h-1.5"></span>
                         <span class="wave-bar h-3"></span>
-                      </div>
+                      </a>
                     </div>
 
-                    <!-- Progress bar -->
+                    <!-- Direct Action Link Footer -->
                     <div class="mt-2.5 pt-2 border-t border-brand-border flex items-center justify-between text-[10px] text-brand-muted">
-                      <span id="audioTimer">00:00</span>
-                      <div class="flex-1 mx-3 h-1 bg-brand-surface rounded-full overflow-hidden">
-                        <div id="audioProgress" class="h-full bg-brand-accent w-0 transition-all duration-300"></div>
-                      </div>
-                      <span>01:45</span>
+                      <span class="flex items-center gap-1 text-slate-300">
+                        <i data-lucide="radio" class="w-3 h-3 text-brand-accent"></i>
+                        @gmsolana_show Session
+                      </span>
+                      <a href="https://x.com/gmsolana_show/status/1998647533883850907?s=46" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-semibold hover:underline flex items-center gap-1">
+                        Play on X <i data-lucide="external-link" class="w-3 h-3"></i>
+                      </a>
                     </div>
                   </div>
 
@@ -892,6 +897,13 @@
                 <span class="flex items-center gap-1 text-slate-200"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Loyal Listeners</span>
                 <span class="flex items-center gap-1 text-slate-200"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Founder Interviews</span>
               </div>
+              <div class="pt-2">
+                <a href="https://x.com/gmsolana_show/status/1998647533883850907?s=46" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-brand-card border border-brand-border hover:border-brand-accent text-xs font-semibold text-white transition-all">
+                  <i data-lucide="play" class="w-3.5 h-3.5 text-brand-accent fill-current"></i>
+                  <span>Listen to Space Recording on X</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-500"></i>
+                </a>
+              </div>
             </div>
 
             <div class="lg:col-span-5">
@@ -1160,19 +1172,19 @@
                 <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-brand-card text-sky-400 border border-brand-border">
                   <i data-lucide="twitter" class="w-3 h-3"></i> X Space Session
                 </span>
-                <span class="text-xs text-brand-muted">@D_deevine</span>
+                <span class="text-xs text-brand-muted">@gmsolana_show</span>
               </div>
               <h4 class="text-base font-heading font-bold text-white">
-                GM Solana Space Host
+                GM Solana Live Space Host
               </h4>
               <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
-                Live audio room hosting 500+ builders discussing product launches and creator opportunities.
+                Live audio room hosting builders, artists, and founders across the African Solana ecosystem.
               </p>
             </div>
             <div class="mt-5 pt-3.5 border-t border-brand-border flex items-center justify-between">
               <span class="text-xs font-medium text-brand-accent">150+ Episodes</span>
-              <a href="https://x.com/D_deevin" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-brand-card hover:bg-white hover:text-brand-black text-slate-300 text-xs font-medium transition-all flex items-center gap-1">
-                <span>View on X</span>
+              <a href="https://x.com/gmsolana_show/status/1998647533883850907?s=46" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-brand-card hover:bg-white hover:text-brand-black text-slate-300 text-xs font-medium transition-all flex items-center gap-1">
+                <span>Listen on X</span>
                 <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
               </a>
             </div>
@@ -1652,50 +1664,7 @@
       requestAnimationFrame(update);
     }
 
-    // Audio Space Simulator
-    let isPlaying = false;
-    let audioInterval = null;
-    let audioSeconds = 0;
 
-    function toggleSpaceAudio() {
-      const playIcon = document.getElementById('playIcon');
-      const waveBars = document.getElementById('waveBars');
-      const status = document.getElementById('spaceStatus');
-      const timer = document.getElementById('audioTimer');
-      const progress = document.getElementById('audioProgress');
-
-      isPlaying = !isPlaying;
-
-      if (isPlaying) {
-        waveBars.classList.add('playing');
-        status.textContent = "🎙️ Live: Divine hosting on stage...";
-        status.classList.add('text-brand-accent');
-        status.classList.remove('text-brand-muted');
-        playIcon.setAttribute('data-lucide', 'pause');
-
-        audioInterval = setInterval(() => {
-          audioSeconds++;
-          const mins = String(Math.floor(audioSeconds / 60)).padStart(2, '0');
-          const secs = String(audioSeconds % 60).padStart(2, '0');
-          timer.textContent = `${mins}:${secs}`;
-          const pct = Math.min((audioSeconds / 105) * 100, 100);
-          progress.style.width = pct + '%';
-
-          if (audioSeconds >= 105) {
-            toggleSpaceAudio();
-            audioSeconds = 0;
-          }
-        }, 1000);
-      } else {
-        waveBars.classList.remove('playing');
-        status.textContent = "Audio paused";
-        status.classList.remove('text-brand-accent');
-        status.classList.add('text-brand-muted');
-        playIcon.setAttribute('data-lucide', 'play');
-        clearInterval(audioInterval);
-      }
-      lucide.createIcons({ attrs: { 'stroke-width': 1.6 } });
-    }
 
     // Content Filter Function (All, TikTok, Twitter)
     function filterContent(type) {
